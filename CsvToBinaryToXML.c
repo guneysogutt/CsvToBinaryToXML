@@ -13,6 +13,9 @@
 #define MAX_BANK_ACC_LEN 13
 #define MAX_IBAN_LEN 28
 #define MAX_ACC_TYPE_LEN 14
+//#define MAX_CURRENCY_UNIT_LEN 4
+//#define MAX_AVAILABLE_LOAN_LEN 5
+
 
 
 // the structure of customer
@@ -32,6 +35,20 @@ typedef struct _customer {
 } ;
 
 typedef struct _customer customer; // use the _customer as customer
+
+
+void addCommaSpace(char *str) {
+    char *p = str;
+    while (*p) {
+        if (*p == ',' && *(p+1) == ',') { // if a consecutive commas occurs
+            *p = ',';
+            *(p+1) = ' '; // add a space between them
+            *(p+2) = ',';
+        } else {
+            p++;
+        }
+    }
+}
 
 int main() {
 
@@ -61,6 +78,7 @@ int main() {
     // read each subsequent line using sscanf()
     while (fgets(line, line_length, fp) != NULL) {
 
+        addCommaSpace(line);
         // this implementation found from IBM documentation
         //%[^,] means that read until the comma, but don't include it
         // "%[^,],%[^,],%c,%[^,],%[^,],%[^,],%[^,],%[^,],%[^,],%[^,],%d,%c\n"
