@@ -38,7 +38,7 @@ typedef struct _customer {
 
 typedef struct _customer customer; // use the _customer as customer
 
-customer customers[51];
+customer customers[51]; // create the customers array
 
 // this function adds a space between two consecutive commas
 void addCommaSpace(char *str) { 
@@ -50,7 +50,7 @@ void addCommaSpace(char *str) {
     
     while (*p) {
 
-        if (*p == ',' && *(p+1) == ',') { // if a consecutive commas occurs
+        if (*p == ',' && *(p+1) == ',') { // if consecutive commas occurs
             
             *p = ',';
             for(int i = size; i > index + 2; i--){ // move each char one cell right in order to allocate the space without losing data
@@ -62,15 +62,15 @@ void addCommaSpace(char *str) {
         } else { // if no consecutive commas
             p++; // just increase the pointer
         }
-        index++; // increase the index
+        index++; // increase the index for each loop
     }
 } // end of addCommaSpace
 
 
+// CONVERING CSV FILE TO BINARY FILE
 void csv_to_bin (char* input_file, char* output_file){
 
     FILE *fp; // create file pointer
-
 
     int num_customers = 0; // set the initial customer number before adding to the struct array
 
@@ -92,14 +92,16 @@ void csv_to_bin (char* input_file, char* output_file){
 
 
     // read each subsequent line using sscanf()
+    //then assign the data for each attribute of the customer structure seperately
     while (fgets(line, line_length, fp) != NULL) {
 
-        addCommaSpace(line);
+        addCommaSpace(line); // add space if there are consecutive commas
+
         // this implementation found from IBM documentation
         //%[^,] means that read until the comma, but don't include it
-        // "%[^,],%[^,],%c,%[^,],%[^,],%[^,],%[^,],%[^,],%[^,],%[^,],%d,%c\n"
+        // "%[^,],%[^,],%[^,],%[^,],%[^,],%[^,],%[^,],%[^,],%[^,],%[^,],%d,%s\n"
         sscanf(line, "%[^,],%[^,],%[^,],%[^,],%[^,],%[^,],%[^,],%[^,],%[^,],%[^,],%d,%s\n",
-               &customers[num_customers].name,
+               &customers[num_customers].name, 
                &customers[num_customers].surname,
                &customers[num_customers].gender,
                &customers[num_customers].occupancy,
@@ -115,7 +117,6 @@ void csv_to_bin (char* input_file, char* output_file){
 
         num_customers++; // increase the index number
     }
-
 
 
     fclose(fp); // close the file
@@ -134,7 +135,7 @@ void csv_to_bin (char* input_file, char* output_file){
 
     fclose(fp); // close the file
 
-    // Print out the customers
+    // print the customers
     for (int i = 0; i < num_customers; i++) {
 
         printf("Customer %d:\n", i + 1);
@@ -150,14 +151,14 @@ void csv_to_bin (char* input_file, char* output_file){
         printf("Total Balance Available: %d\n", customers[i].totalBalanceAvailable);
         printf("Available for Loan: %s\n", customers[i].availableForLoan);
         printf("\n");
-
     }
 
 } // end csv_to_bin
 
-void binary_to_XML(char* input_file,char* output_file){
-    // CONVERTIRNG BINARY TO XML
 
+// CONVERTIRNG BINARY TO XML
+void binary_to_XML(char* input_file,char* output_file){
+    
     FILE* fp;
 
     xmlDocPtr records_document = NULL;       /* document pointer */
@@ -214,7 +215,6 @@ void binary_to_XML(char* input_file,char* output_file){
     } 
 
 
-    
 
     fclose(fp);
     /*
@@ -241,8 +241,8 @@ void XSD_validation(char* input_file, char* output_file){
     printf("This function will be updated\n");
 }
 
-int main(int argc, char **argv) {
 
+int main(int argc, char **argv) {
 
     // set and assign the command query file names and type
     char* input_file = argv[1];
