@@ -1,0 +1,803 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<records>
+  <row id="1">
+    <customer_info>
+      <name>Ahmet</name>
+      <surname>Ã–zdemir</surname>
+      <gender>M</gender>
+      <occupancy>teacher</occupancy>
+      <level_of_education>BSc</level_of_education>
+    </customer_info>
+    <bank_account_info>
+      <bank_account_number>0123-4567890</bank_account_number>
+      <IBAN>TR12 3456 7890 1234 5678 90</IBAN>
+      <account_type>deposit</account_type>
+      <total_balance_available currency_unit="â‚" bigEnd_Version="Will be updated">768</total_balance_available>
+      <available_for_loan>ðŸâ‚</available_for_loan>
+    </bank_account_info>
+  </row>
+  <row id="2">
+    <customer_info>
+      <name>Ceren</name>
+      <surname>KÄ±lÄ±Ã§</surname>
+      <gender>F</gender>
+      <occupancy>accountant</occupancy>
+      <level_of_education>HS</level_of_education>
+    </customer_info>
+    <bank_account_info>
+      <bank_account_number>3242-5456343</bank_account_number>
+      <IBAN>TR56 2354 5442 5535 3434 43</IBAN>
+      <account_type>daily_deposit</account_type>
+      <total_balance_available currency_unit="â‚é" bigEnd_Version="Will be updated">489</total_balance_available>
+      <available_for_loan>â˜â‚é</available_for_loan>
+    </bank_account_info>
+  </row>
+  <row id="3">
+    <customer_info>
+      <name>Deniz</name>
+      <surname>Aycan</surname>
+      <gender>F</gender>
+      <occupancy>doctor</occupancy>
+      <level_of_education>PhD</level_of_education>
+    </customer_info>
+    <bank_account_info>
+      <bank_account_number>4422-6749332</bank_account_number>
+      <IBAN>TR12 8575 3737 6943 3453 21</IBAN>
+      <account_type>deposit</account_type>
+      <total_balance_available currency_unit="$" bigEnd_Version="Will be updated">5120</total_balance_available>
+      <available_for_loan>ðŸ$</available_for_loan>
+    </bank_account_info>
+  </row>
+  <row id="4">
+    <customer_info>
+      <name>Hasan</name>
+      <surname>Sonat</surname>
+      <gender>M</gender>
+      <occupancy>butcher</occupancy>
+      <level_of_education>PS</level_of_education>
+    </customer_info>
+    <bank_account_info>
+      <bank_account_number>1928-4329787</bank_account_number>
+      <IBAN>TR37 9876 6543 2109 8763 34</IBAN>
+      <account_type>drawing</account_type>
+      <total_balance_available currency_unit="â‚Š" bigEnd_Version="Will be updated">650</total_balance_available>
+      <available_for_loan>â˜â‚Š</available_for_loan>
+    </bank_account_info>
+  </row>
+  <row id="5">
+    <customer_info>
+      <name>Fern</name>
+      <surname>Dawson</surname>
+      <gender>M</gender>
+      <occupancy>academician</occupancy>
+      <level_of_education>MSc</level_of_education>
+    </customer_info>
+    <bank_account_info>
+      <bank_account_number>2324-3242231</bank_account_number>
+      <IBAN>TR57 2425 9598 2324 8492 23</IBAN>
+      <account_type>drawing</account_type>
+      <total_balance_available currency_unit="â‚¹" bigEnd_Version="Will be updated">953</total_balance_available>
+      <available_for_loan>ðŸâ‚¹</available_for_loan>
+    </bank_account_info>
+  </row>
+  <row id="6">
+    <customer_info>
+      <name>Oskar</name>
+      <surname>Andrews</surname>
+      <gender>M</gender>
+      <occupancy>doctor</occupancy>
+      <level_of_education>PhD</level_of_education>
+    </customer_info>
+    <bank_account_info>
+      <bank_account_number>9686-8473734</bank_account_number>
+      <IBAN>TR96 8334 3242 2523 5230 02</IBAN>
+      <account_type>deposit</account_type>
+      <total_balance_available currency_unit="â‚´" bigEnd_Version="Will be updated">1204</total_balance_available>
+      <available_for_loan>ðŸâ‚´</available_for_loan>
+    </bank_account_info>
+  </row>
+  <row id="7">
+    <customer_info>
+      <name>Kaleb</name>
+      <surname>Rogers</surname>
+      <gender>M</gender>
+      <occupancy>lawyer</occupancy>
+      <level_of_education>BSc</level_of_education>
+    </customer_info>
+    <bank_account_info>
+      <bank_account_number>5843-9503058</bank_account_number>
+      <IBAN>TR67 8430 3853 5320 5275 73</IBAN>
+      <account_type>daily_deposit</account_type>
+      <total_balance_available currency_unit="â‚Ô" bigEnd_Version="Will be updated">212</total_balance_available>
+      <available_for_loan>â˜â‚Ô</available_for_loan>
+    </bank_account_info>
+  </row>
+  <row id="8">
+    <customer_info>
+      <name>Aayan</name>
+      <surname>Fuentes</surname>
+      <gender>F</gender>
+      <occupancy>police</occupancy>
+      <level_of_education>HS</level_of_education>
+    </customer_info>
+    <bank_account_info>
+      <bank_account_number>6774-0302135</bank_account_number>
+      <IBAN>TR12 9438 3004 3544 3266 34</IBAN>
+      <account_type>drawing</account_type>
+      <total_balance_available currency_unit="$" bigEnd_Version="Will be updated">450</total_balance_available>
+      <available_for_loan>â˜$</available_for_loan>
+    </bank_account_info>
+  </row>
+  <row id="9">
+    <customer_info>
+      <name>Mohammed</name>
+      <surname>Hampton</surname>
+      <gender>M</gender>
+      <occupancy>businessman</occupancy>
+      <level_of_education>HS</level_of_education>
+    </customer_info>
+    <bank_account_info>
+      <bank_account_number>9000-1113813</bank_account_number>
+      <IBAN>TR85 9359 1432 9101 4519 00</IBAN>
+      <account_type>deposit</account_type>
+      <total_balance_available currency_unit="â‚Ù" bigEnd_Version="Will be updated">985</total_balance_available>
+      <available_for_loan>ðŸâ‚Ù</available_for_loan>
+    </bank_account_info>
+  </row>
+  <row id="10">
+    <customer_info>
+      <name>Rafael</name>
+      <surname>Luna</surname>
+      <gender>M</gender>
+      <occupancy>unemployed</occupancy>
+      <level_of_education>PS</level_of_education>
+    </customer_info>
+    <bank_account_info>
+      <bank_account_number>1928-4727423</bank_account_number>
+      <IBAN>TR58 3572 0105 3720 2773 25</IBAN>
+      <account_type>drawing</account_type>
+      <total_balance_available currency_unit="â‚–" bigEnd_Version="Will be updated">150</total_balance_available>
+      <available_for_loan>â˜â‚–</available_for_loan>
+    </bank_account_info>
+  </row>
+  <row id="11">
+    <customer_info>
+      <name>Serena</name>
+      <surname>Moon</surname>
+      <gender>F</gender>
+      <occupancy>unemployed</occupancy>
+      <level_of_education>BSc</level_of_education>
+    </customer_info>
+    <bank_account_info>
+      <bank_account_number>6748-2021741</bank_account_number>
+      <IBAN>TR94 9271 3914 7944 5357 29</IBAN>
+      <account_type>deposit</account_type>
+      <total_balance_available currency_unit="$" bigEnd_Version="Will be updated">500</total_balance_available>
+      <available_for_loan>ðŸ$</available_for_loan>
+    </bank_account_info>
+  </row>
+  <row id="12">
+    <customer_info>
+      <name>Alasdair</name>
+      <surname>Page</surname>
+      <gender>F</gender>
+      <occupancy> </occupancy>
+      <level_of_education>BSc</level_of_education>
+    </customer_info>
+    <bank_account_info>
+      <bank_account_number>5738-5921015</bank_account_number>
+      <IBAN>TR62 9839 6664 9392 0234 34</IBAN>
+      <account_type>daily_deposit</account_type>
+      <total_balance_available currency_unit="â‚Ž" bigEnd_Version="Will be updated">910</total_balance_available>
+      <available_for_loan>ðŸâ‚Ž</available_for_loan>
+    </bank_account_info>
+  </row>
+  <row id="13">
+    <customer_info>
+      <name>Dawson</name>
+      <surname>Ball</surname>
+      <gender>M</gender>
+      <occupancy>businessman</occupancy>
+      <level_of_education>MSc</level_of_education>
+    </customer_info>
+    <bank_account_info>
+      <bank_account_number>9349-7177133</bank_account_number>
+      <IBAN>TR11 1132 1121 5343 9538 22</IBAN>
+      <account_type>deposit</account_type>
+      <total_balance_available currency_unit="â‚(" bigEnd_Version="Will be updated">1320</total_balance_available>
+      <available_for_loan>ðŸâ‚(</available_for_loan>
+    </bank_account_info>
+  </row>
+  <row id="14">
+    <customer_info>
+      <name>Tallulah</name>
+      <surname>Figueroa</surname>
+      <gender>M</gender>
+      <occupancy>greengrocer</occupancy>
+      <level_of_education>HS</level_of_education>
+    </customer_info>
+    <bank_account_info>
+      <bank_account_number>2748-2842910</bank_account_number>
+      <IBAN>TR19 3194 7196 5033 2774 79</IBAN>
+      <account_type>drawing</account_type>
+      <total_balance_available currency_unit="â‚ú" bigEnd_Version="Will be updated">250</total_balance_available>
+      <available_for_loan>â˜â‚ú</available_for_loan>
+    </bank_account_info>
+  </row>
+  <row id="15">
+    <customer_info>
+      <name>Kamil</name>
+      <surname>Mccullough</surname>
+      <gender>M</gender>
+      <occupancy>engineer</occupancy>
+      <level_of_education>MSc</level_of_education>
+    </customer_info>
+    <bank_account_info>
+      <bank_account_number>9849-2917470</bank_account_number>
+      <IBAN>TR75 0202 7188 5626 3761 81</IBAN>
+      <account_type>drawing</account_type>
+      <total_balance_available currency_unit="$" bigEnd_Version="Will be updated">1024</total_balance_available>
+      <available_for_loan>ðŸ$</available_for_loan>
+    </bank_account_info>
+  </row>
+  <row id="16">
+    <customer_info>
+      <name>Teddy</name>
+      <surname>Davis</surname>
+      <gender>M</gender>
+      <occupancy>academician</occupancy>
+      <level_of_education>PhD</level_of_education>
+    </customer_info>
+    <bank_account_info>
+      <bank_account_number>5739-1001757</bank_account_number>
+      <IBAN>TR80 4829 1977 7291 9572 91</IBAN>
+      <account_type>daily_deposit</account_type>
+      <total_balance_available currency_unit="â‚£" bigEnd_Version="Will be updated">675</total_balance_available>
+      <available_for_loan>ðŸâ‚£</available_for_loan>
+    </bank_account_info>
+  </row>
+  <row id="17">
+    <customer_info>
+      <name>Otto</name>
+      <surname>Bradford</surname>
+      <gender>F</gender>
+      <occupancy>engineer</occupancy>
+      <level_of_education>BSc</level_of_education>
+    </customer_info>
+    <bank_account_info>
+      <bank_account_number>8201-7570214</bank_account_number>
+      <IBAN>TR11 2141 2321 3358 0238 65</IBAN>
+      <account_type>deposit</account_type>
+      <total_balance_available currency_unit="â‚ " bigEnd_Version="Will be updated">1824</total_balance_available>
+      <available_for_loan>ðŸâ‚ </available_for_loan>
+    </bank_account_info>
+  </row>
+  <row id="18">
+    <customer_info>
+      <name>Wiktor</name>
+      <surname>Fleming</surname>
+      <gender>M</gender>
+      <occupancy>salesperson</occupancy>
+      <level_of_education>HS</level_of_education>
+    </customer_info>
+    <bank_account_info>
+      <bank_account_number>7023-2423580</bank_account_number>
+      <IBAN>TR05 9288 1047 7400 2018 51</IBAN>
+      <account_type>deposit</account_type>
+      <total_balance_available currency_unit="â‚6" bigEnd_Version="Will be updated">310</total_balance_available>
+      <available_for_loan>â˜â‚6</available_for_loan>
+    </bank_account_info>
+  </row>
+  <row id="19">
+    <customer_info>
+      <name>Isaac</name>
+      <surname>Underwood</surname>
+      <gender>M</gender>
+      <occupancy>pharmacist</occupancy>
+      <level_of_education>BSc</level_of_education>
+    </customer_info>
+    <bank_account_info>
+      <bank_account_number>9572-8910382</bank_account_number>
+      <IBAN>TR85 9203 3352 0288 2242 44</IBAN>
+      <account_type>deposit</account_type>
+      <total_balance_available currency_unit="$" bigEnd_Version="Will be updated">690</total_balance_available>
+      <available_for_loan>ðŸ$</available_for_loan>
+    </bank_account_info>
+  </row>
+  <row id="20">
+    <customer_info>
+      <name>Franklin</name>
+      <surname>Shepard</surname>
+      <gender>M</gender>
+      <occupancy>dentist</occupancy>
+      <level_of_education>MSc</level_of_education>
+    </customer_info>
+    <bank_account_info>
+      <bank_account_number>7488-3666232</bank_account_number>
+      <IBAN>TR11 1323 1188 4779 9338 77</IBAN>
+      <account_type>daily_deposit</account_type>
+      <total_balance_available currency_unit="â‚4" bigEnd_Version="Will be updated">820</total_balance_available>
+      <available_for_loan>ðŸâ‚4</available_for_loan>
+    </bank_account_info>
+  </row>
+  <row id="21">
+    <customer_info>
+      <name>Cormac</name>
+      <surname>Villa</surname>
+      <gender>F</gender>
+      <occupancy>teacher</occupancy>
+      <level_of_education>BSc</level_of_education>
+    </customer_info>
+    <bank_account_info>
+      <bank_account_number>7759-9371661</bank_account_number>
+      <IBAN>TR93 8333 1008 8321 3177 01</IBAN>
+      <account_type>drawing</account_type>
+      <total_balance_available currency_unit="â‚‚" bigEnd_Version="Will be updated">130</total_balance_available>
+      <available_for_loan>â˜â‚‚</available_for_loan>
+    </bank_account_info>
+  </row>
+  <row id="22">
+    <customer_info>
+      <name>Joyce</name>
+      <surname>Branch</surname>
+      <gender>F</gender>
+      <occupancy>economist</occupancy>
+      <level_of_education>PhD</level_of_education>
+    </customer_info>
+    <bank_account_info>
+      <bank_account_number>6638-8377522</bank_account_number>
+      <IBAN>TR10 1088 3297 7731 6658 89</IBAN>
+      <account_type>deposit</account_type>
+      <total_balance_available currency_unit="â‚Ÿ" bigEnd_Version="Will be updated">927</total_balance_available>
+      <available_for_loan>ðŸâ‚Ÿ</available_for_loan>
+    </bank_account_info>
+  </row>
+  <row id="23">
+    <customer_info>
+      <name>Mariyah</name>
+      <surname>Lawson</surname>
+      <gender>F</gender>
+      <occupancy>lawyer</occupancy>
+      <level_of_education>BSc</level_of_education>
+    </customer_info>
+    <bank_account_info>
+      <bank_account_number>9968-8380057</bank_account_number>
+      <IBAN>TR88 8233 6665 9665 9693 91</IBAN>
+      <account_type>deposit</account_type>
+      <total_balance_available currency_unit="â‚h" bigEnd_Version="Will be updated">1384</total_balance_available>
+      <available_for_loan>ðŸâ‚h</available_for_loan>
+    </bank_account_info>
+  </row>
+  <row id="24">
+    <customer_info>
+      <name>Mikolaj</name>
+      <surname>Le</surname>
+      <gender>M</gender>
+      <occupancy> </occupancy>
+      <level_of_education>HS</level_of_education>
+    </customer_info>
+    <bank_account_info>
+      <bank_account_number>3322-8855220</bank_account_number>
+      <IBAN>TR22 9988 2277 4466 5400 44</IBAN>
+      <account_type>drawing</account_type>
+      <total_balance_available currency_unit="$" bigEnd_Version="Will be updated">90</total_balance_available>
+      <available_for_loan>â˜$</available_for_loan>
+    </bank_account_info>
+  </row>
+  <row id="25">
+    <customer_info>
+      <name>Reuben</name>
+      <surname>Morrow</surname>
+      <gender>M</gender>
+      <occupancy>teacher</occupancy>
+      <level_of_education>MSc</level_of_education>
+    </customer_info>
+    <bank_account_info>
+      <bank_account_number>4499-4757929</bank_account_number>
+      <IBAN>TR77 8489 9603 3552 2677 49</IBAN>
+      <account_type>daily_deposit</account_type>
+      <total_balance_available currency_unit="â‚ô" bigEnd_Version="Will be updated">500</total_balance_available>
+      <available_for_loan>ðŸâ‚ô</available_for_loan>
+    </bank_account_info>
+  </row>
+  <row id="26">
+    <customer_info>
+      <name>Jonah</name>
+      <surname>Arnold</surname>
+      <gender>M</gender>
+      <occupancy>dentist</occupancy>
+      <level_of_education>PhD</level_of_education>
+    </customer_info>
+    <bank_account_info>
+      <bank_account_number>8333-7599522</bank_account_number>
+      <IBAN>TR85 8000 5775 9922 7750 13</IBAN>
+      <account_type>deposit</account_type>
+      <total_balance_available currency_unit="â‚ " bigEnd_Version="Will be updated">800</total_balance_available>
+      <available_for_loan>ðŸâ‚ </available_for_loan>
+    </bank_account_info>
+  </row>
+  <row id="27">
+    <customer_info>
+      <name>Shirley</name>
+      <surname>Gay</surname>
+      <gender>F</gender>
+      <occupancy> </occupancy>
+      <level_of_education>PS</level_of_education>
+    </customer_info>
+    <bank_account_info>
+      <bank_account_number>1116-4477889</bank_account_number>
+      <IBAN>TR46 6336 6243 4558 8978 79</IBAN>
+      <account_type>drawing</account_type>
+      <total_balance_available currency_unit="â‚¾" bigEnd_Version="Will be updated">190</total_balance_available>
+      <available_for_loan>â˜â‚¾</available_for_loan>
+    </bank_account_info>
+  </row>
+  <row id="28">
+    <customer_info>
+      <name>Soraya</name>
+      <surname>Miranda</surname>
+      <gender>F</gender>
+      <occupancy>economist</occupancy>
+      <level_of_education>BSc</level_of_education>
+    </customer_info>
+    <bank_account_info>
+      <bank_account_number>3376-9300275</bank_account_number>
+      <IBAN>TR55 7399 2775 0004 3221 41</IBAN>
+      <account_type>daily_deposit</account_type>
+      <total_balance_available currency_unit="â‚à" bigEnd_Version="Will be updated">736</total_balance_available>
+      <available_for_loan>ðŸâ‚à</available_for_loan>
+    </bank_account_info>
+  </row>
+  <row id="29">
+    <customer_info>
+      <name>Lorcan</name>
+      <surname>Ibarra</surname>
+      <gender>M</gender>
+      <occupancy>doctor</occupancy>
+      <level_of_education>BSc</level_of_education>
+    </customer_info>
+    <bank_account_info>
+      <bank_account_number>5522-8400000</bank_account_number>
+      <IBAN>TR00 4888 4726 6640 0024 82</IBAN>
+      <account_type>deposit</account_type>
+      <total_balance_available currency_unit="â‚Ä&#9;" bigEnd_Version="Will be updated">2500</total_balance_available>
+      <available_for_loan>ðŸâ‚Ä	</available_for_loan>
+    </bank_account_info>
+  </row>
+  <row id="30">
+    <customer_info>
+      <name>Jake</name>
+      <surname>Larsen</surname>
+      <gender>M</gender>
+      <occupancy>engineer</occupancy>
+      <level_of_education>PhD</level_of_education>
+    </customer_info>
+    <bank_account_info>
+      <bank_account_number>1001-9201884</bank_account_number>
+      <IBAN>TR66 7944 5524 4927 5491 95</IBAN>
+      <account_type>deposit</account_type>
+      <total_balance_available currency_unit="$" bigEnd_Version="Will be updated">284</total_balance_available>
+      <available_for_loan>â˜$</available_for_loan>
+    </bank_account_info>
+  </row>
+  <row id="31">
+    <customer_info>
+      <name>Alvin</name>
+      <surname>Burns</surname>
+      <gender>M</gender>
+      <occupancy>economist</occupancy>
+      <level_of_education>MSc</level_of_education>
+    </customer_info>
+    <bank_account_info>
+      <bank_account_number>7729-9274011</bank_account_number>
+      <IBAN>TR88 4422 0011 7447 5733 55</IBAN>
+      <account_type>drawing</account_type>
+      <total_balance_available currency_unit="â‚x" bigEnd_Version="Will be updated">120</total_balance_available>
+      <available_for_loan>â˜â‚x</available_for_loan>
+    </bank_account_info>
+  </row>
+  <row id="32">
+    <customer_info>
+      <name>Szymon</name>
+      <surname>Owens</surname>
+      <gender>M</gender>
+      <occupancy> </occupancy>
+      <level_of_education>MSc</level_of_education>
+    </customer_info>
+    <bank_account_info>
+      <bank_account_number>5555-6371758</bank_account_number>
+      <IBAN>TR24 4537 7311 9663 0024 66</IBAN>
+      <account_type>drawing</account_type>
+      <total_balance_available currency_unit="$" bigEnd_Version="Will be updated">1020</total_balance_available>
+      <available_for_loan>ðŸ$</available_for_loan>
+    </bank_account_info>
+  </row>
+  <row id="33">
+    <customer_info>
+      <name>Maariyah</name>
+      <surname>Mathis</surname>
+      <gender>F</gender>
+      <occupancy>doctor</occupancy>
+      <level_of_education>MSc</level_of_education>
+    </customer_info>
+    <bank_account_info>
+      <bank_account_number>6642-9265463</bank_account_number>
+      <IBAN>TR11 1138 8300 7737 3319 62</IBAN>
+      <account_type>deposit</account_type>
+      <total_balance_available currency_unit="â‚…" bigEnd_Version="Will be updated">389</total_balance_available>
+      <available_for_loan>â˜â‚…</available_for_loan>
+    </bank_account_info>
+  </row>
+  <row id="34">
+    <customer_info>
+      <name>Azaan</name>
+      <surname>Pugh</surname>
+      <gender>F</gender>
+      <occupancy>engineer</occupancy>
+      <level_of_education>BSc</level_of_education>
+    </customer_info>
+    <bank_account_info>
+      <bank_account_number>1100-0022884</bank_account_number>
+      <IBAN>TR00 3388 3355 5775 5005 99</IBAN>
+      <account_type>daily_deposit</account_type>
+      <total_balance_available currency_unit="â‚ü" bigEnd_Version="Will be updated">508</total_balance_available>
+      <available_for_loan>â˜â‚ü</available_for_loan>
+    </bank_account_info>
+  </row>
+  <row id="35">
+    <customer_info>
+      <name>Jamal</name>
+      <surname>Gallagher</surname>
+      <gender>M</gender>
+      <occupancy>greengrocer</occupancy>
+      <level_of_education>HS</level_of_education>
+    </customer_info>
+    <bank_account_info>
+      <bank_account_number>6767-3003776</bank_account_number>
+      <IBAN>TR33 9948 8500 0047 7529 40</IBAN>
+      <account_type>drawing</account_type>
+      <total_balance_available currency_unit="â‚¥" bigEnd_Version="Will be updated">677</total_balance_available>
+      <available_for_loan>â˜â‚¥</available_for_loan>
+    </bank_account_info>
+  </row>
+  <row id="36">
+    <customer_info>
+      <name>Xander</name>
+      <surname>Hubbard</surname>
+      <gender>M</gender>
+      <occupancy>unemployed</occupancy>
+      <level_of_education>HS</level_of_education>
+    </customer_info>
+    <bank_account_info>
+      <bank_account_number>5553-8850385</bank_account_number>
+      <IBAN>TR34 0001 0003 0005 2427 87</IBAN>
+      <account_type>drawing</account_type>
+      <total_balance_available currency_unit="â‚U" bigEnd_Version="Will be updated">85</total_balance_available>
+      <available_for_loan>â˜â‚U</available_for_loan>
+    </bank_account_info>
+  </row>
+  <row id="37">
+    <customer_info>
+      <name>Liberty</name>
+      <surname>Blackwell</surname>
+      <gender>F</gender>
+      <occupancy>unemployed</occupancy>
+      <level_of_education>MSc</level_of_education>
+    </customer_info>
+    <bank_account_info>
+      <bank_account_number>6886-9477694</bank_account_number>
+      <IBAN>TR44 4479 5933 0599 5000 05</IBAN>
+      <account_type>daily_deposit</account_type>
+      <total_balance_available currency_unit="â‚k" bigEnd_Version="Will be updated">107</total_balance_available>
+      <available_for_loan>â˜â‚k</available_for_loan>
+    </bank_account_info>
+  </row>
+  <row id="38">
+    <customer_info>
+      <name>Frederic</name>
+      <surname>Phelps</surname>
+      <gender>M</gender>
+      <occupancy>businessman</occupancy>
+      <level_of_education>BSc</level_of_education>
+    </customer_info>
+    <bank_account_info>
+      <bank_account_number>4447-4800474</bank_account_number>
+      <IBAN>TR96 8850 3770 3775 9211 99</IBAN>
+      <account_type>deposit</account_type>
+      <total_balance_available currency_unit="$" bigEnd_Version="Will be updated">690</total_balance_available>
+      <available_for_loan>ðŸ$</available_for_loan>
+    </bank_account_info>
+  </row>
+  <row id="39">
+    <customer_info>
+      <name>Sahar</name>
+      <surname>Barnes</surname>
+      <gender>F</gender>
+      <occupancy> </occupancy>
+      <level_of_education>MSc</level_of_education>
+    </customer_info>
+    <bank_account_info>
+      <bank_account_number>8699-3772776</bank_account_number>
+      <IBAN>TR10 4094 9090 0042 4464 77</IBAN>
+      <account_type>drawing</account_type>
+      <total_balance_available currency_unit="â‚q" bigEnd_Version="Will be updated">369</total_balance_available>
+      <available_for_loan>â˜â‚q</available_for_loan>
+    </bank_account_info>
+  </row>
+  <row id="40">
+    <customer_info>
+      <name>Leonard</name>
+      <surname>Jackson</surname>
+      <gender>M</gender>
+      <occupancy>police</occupancy>
+      <level_of_education>BSc</level_of_education>
+    </customer_info>
+    <bank_account_info>
+      <bank_account_number>1148-9492754</bank_account_number>
+      <IBAN>TR88 6906 0038 2791 7878 19</IBAN>
+      <account_type>daily_deposit</account_type>
+      <total_balance_available currency_unit="â‚" bigEnd_Version="Will be updated">793</total_balance_available>
+      <available_for_loan>ðŸâ‚</available_for_loan>
+    </bank_account_info>
+  </row>
+  <row id="41">
+    <customer_info>
+      <name>Madeleine</name>
+      <surname>Burton</surname>
+      <gender>F</gender>
+      <occupancy>salesperson</occupancy>
+      <level_of_education>BSc</level_of_education>
+    </customer_info>
+    <bank_account_info>
+      <bank_account_number>8885-9395739</bank_account_number>
+      <IBAN>TR74 3829 9197 7599 8800 04</IBAN>
+      <account_type>deposit</account_type>
+      <total_balance_available currency_unit="â‚" bigEnd_Version="Will be updated">280</total_balance_available>
+      <available_for_loan>â˜â‚</available_for_loan>
+    </bank_account_info>
+  </row>
+  <row id="42">
+    <customer_info>
+      <name>Jordan</name>
+      <surname>Paul</surname>
+      <gender>M</gender>
+      <occupancy>businessman</occupancy>
+      <level_of_education>HS</level_of_education>
+    </customer_info>
+    <bank_account_info>
+      <bank_account_number>6666-8686888</bank_account_number>
+      <IBAN>TR03 2888 4920 0004 7742 44</IBAN>
+      <account_type>deposit</account_type>
+      <total_balance_available currency_unit="$" bigEnd_Version="Will be updated">2280</total_balance_available>
+      <available_for_loan>ðŸ$</available_for_loan>
+    </bank_account_info>
+  </row>
+  <row id="43">
+    <customer_info>
+      <name>Aisha</name>
+      <surname>Ryan</surname>
+      <gender>F</gender>
+      <occupancy>engineer</occupancy>
+      <level_of_education>PhD</level_of_education>
+    </customer_info>
+    <bank_account_info>
+      <bank_account_number>6668-9690003</bank_account_number>
+      <IBAN>TR90 9399 3925 7101 8381 85</IBAN>
+      <account_type>drawing</account_type>
+      <total_balance_available currency_unit="$" bigEnd_Version="Will be updated">956</total_balance_available>
+      <available_for_loan>ðŸ$</available_for_loan>
+    </bank_account_info>
+  </row>
+  <row id="44">
+    <customer_info>
+      <name>Francesco</name>
+      <surname>Ashley</surname>
+      <gender>M</gender>
+      <occupancy>teacher</occupancy>
+      <level_of_education>BSc</level_of_education>
+    </customer_info>
+    <bank_account_info>
+      <bank_account_number>4444-9000482</bank_account_number>
+      <IBAN>TR11 9918 8272 1212 2123 73</IBAN>
+      <account_type>daily_deposit</account_type>
+      <total_balance_available currency_unit="â‚›" bigEnd_Version="Will be updated">411</total_balance_available>
+      <available_for_loan>â˜â‚›</available_for_loan>
+    </bank_account_info>
+  </row>
+  <row id="45">
+    <customer_info>
+      <name>Rex</name>
+      <surname>Chaney</surname>
+      <gender>M</gender>
+      <occupancy>police</occupancy>
+      <level_of_education>HS</level_of_education>
+    </customer_info>
+    <bank_account_info>
+      <bank_account_number>2223-2354485</bank_account_number>
+      <IBAN>TR77 7499 4920 0114 8842 46</IBAN>
+      <account_type>deposit</account_type>
+      <total_balance_available currency_unit="â‚9" bigEnd_Version="Will be updated">825</total_balance_available>
+      <available_for_loan>ðŸâ‚9</available_for_loan>
+    </bank_account_info>
+  </row>
+  <row id="46">
+    <customer_info>
+      <name>Anais</name>
+      <surname>Russell</surname>
+      <gender>F</gender>
+      <occupancy>doctor</occupancy>
+      <level_of_education>BSc</level_of_education>
+    </customer_info>
+    <bank_account_info>
+      <bank_account_number>4428-0018733</bank_account_number>
+      <IBAN>TR11 0199 0194 7729 2744 27</IBAN>
+      <account_type>deposit</account_type>
+      <total_balance_available currency_unit="$" bigEnd_Version="Will be updated">2110</total_balance_available>
+      <available_for_loan>ðŸ$</available_for_loan>
+    </bank_account_info>
+  </row>
+  <row id="47">
+    <customer_info>
+      <name>Thea</name>
+      <surname>Rollins</surname>
+      <gender>F</gender>
+      <occupancy>lawyer</occupancy>
+      <level_of_education>MSc</level_of_education>
+    </customer_info>
+    <bank_account_info>
+      <bank_account_number>8589-2900181</bank_account_number>
+      <IBAN>TR08 4700 0482 2881 1477 53</IBAN>
+      <account_type>drawing</account_type>
+      <total_balance_available currency_unit="â‚_" bigEnd_Version="Will be updated">863</total_balance_available>
+      <available_for_loan>ðŸâ‚_</available_for_loan>
+    </bank_account_info>
+  </row>
+  <row id="48">
+    <customer_info>
+      <name>Isobelle</name>
+      <surname>Villanueva</surname>
+      <gender>F</gender>
+      <occupancy>pharmacist</occupancy>
+      <level_of_education>BSc</level_of_education>
+    </customer_info>
+    <bank_account_info>
+      <bank_account_number>1113-3990244</bank_account_number>
+      <IBAN>TR66 7488 8371 0077 7742 29</IBAN>
+      <account_type>daily_deposit</account_type>
+      <total_balance_available currency_unit="â‚ƒ" bigEnd_Version="Will be updated">1411</total_balance_available>
+      <available_for_loan>ðŸâ‚ƒ</available_for_loan>
+    </bank_account_info>
+  </row>
+  <row id="49">
+    <customer_info>
+      <name>Henrietta</name>
+      <surname>Moyer</surname>
+      <gender>F</gender>
+      <occupancy>unemployed</occupancy>
+      <level_of_education>PS</level_of_education>
+    </customer_info>
+    <bank_account_info>
+      <bank_account_number>5529-2991142</bank_account_number>
+      <IBAN>TR89 9572 2456 6653 8555 31</IBAN>
+      <account_type>drawing</account_type>
+      <total_balance_available currency_unit="â‚K" bigEnd_Version="Will be updated">75</total_balance_available>
+      <available_for_loan>â˜â‚K</available_for_loan>
+    </bank_account_info>
+  </row>
+  <row id="50">
+    <customer_info>
+      <name>Katherine</name>
+      <surname>Pearce</surname>
+      <gender>F</gender>
+      <occupancy>housekeeper</occupancy>
+      <level_of_education>PS</level_of_education>
+    </customer_info>
+    <bank_account_info>
+      <bank_account_number>5039-3771947</bank_account_number>
+      <IBAN>TR18 1847 7927 7017 7400 03</IBAN>
+      <account_type>deposit</account_type>
+      <total_balance_available currency_unit="â‚”" bigEnd_Version="Will be updated">404</total_balance_available>
+      <available_for_loan>â˜â‚”</available_for_loan>
+    </bank_account_info>
+  </row>
+</records>

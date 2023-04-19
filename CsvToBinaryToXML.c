@@ -1,6 +1,8 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
+#include <libxml/parser.h>
+#include <libxml/tree.h>
 #pragma pack(1)
 
 
@@ -13,8 +15,8 @@
 #define MAX_BANK_ACC_LEN 13
 #define MAX_IBAN_LEN 28
 #define MAX_ACC_TYPE_LEN 14
-//#define MAX_CURRENCY_UNIT_LEN 4
-//#define MAX_AVAILABLE_LOAN_LEN 5
+#define MAX_CURRENCY_UNIT_LEN 2
+#define MAX_AVAILABLE_LOAN_LEN 2
 
 
 
@@ -29,28 +31,41 @@ typedef struct _customer {
     char bankAccountNumber[MAX_BANK_ACC_LEN];// the format is 0123-4567890
     char IBAN[MAX_IBAN_LEN];// the format is : TR12 3456 7890 1234 5678 90
     char accountType[MAX_ACC_TYPE_LEN];// it can be "deposit","drawing","daily_deposit"
-    char currency_unit;// "€","₺","$"
+    char currency_unit[MAX_CURRENCY_UNIT_LEN];// "€","₺","$"
     int totalBalanceAvailable;// stores the available balance of the customer
-    char availableForLoan; // it can be ":)" or ":("
+    char availableForLoan[MAX_AVAILABLE_LOAN_LEN]; // it can be ":)" or ":("
 } ;
 
 typedef struct _customer customer; // use the _customer as customer
 
 
-void addCommaSpace(char *str) {
+// this function adds a space between two consecutive commas
+void addCommaSpace(char *str) { 
     char *p = str;
+    
+    int size = strlen(str); // get the size of the line
+    
+    int index = 0; // current index
+    
     while (*p) {
-        if (*p == ',' && *(p+1) == ',') { // if a consecutive commas occurs
-            *p = ',';
-            *(p+1) = ' '; // add a space between them
-            *(p+2) = ',';
-        } else {
-            p++;
-        }
-    }
-}
 
-int main() {
+        if (*p == ',' && *(p+1) == ',') { // if a consecutive commas occurs
+            
+            *p = ',';
+            for(int i = size; i > index + 2; i--){ // move each char one cell right in order to allocate the space without losing data
+                str[i] = str[i-1];
+            }
+            *(p+1) = ' '; // add a space between them
+            *(p+2) = ','; // put the original comma back
+            
+        } else { // if no consecutive commas
+            p++; // just increase the pointer
+        }
+        index++; // increase the index
+    }
+} // end of addCommaSpace
+
+int main(int argc, char **argv) {
 
     FILE *fp; // create file pointer
 
@@ -58,11 +73,11 @@ int main() {
 
     int num_customers = 0; // set the initial customer number before adding to the struct array
 
-    fp = fopen("..\\records.csv", "r"); //open a stream with read mode
+    fp = fopen("./records.csv", "r"); //open a stream with read mode
 
 
     if(fp == NULL){ // if an error occurs opening a file
-        printf("error opening file!\n");
+        printf("Error. Can't open cvs file!\n");
         exit (1);
     }
 
@@ -82,7 +97,7 @@ int main() {
         // this implementation found from IBM documentation
         //%[^,] means that read until the comma, but don't include it
         // "%[^,],%[^,],%c,%[^,],%[^,],%[^,],%[^,],%[^,],%[^,],%[^,],%d,%c\n"
-        sscanf(line, "%[^,],%[^,],%[^,],%[^,],%[^,],%[^,],%[^,],%[^,],%[^,],%[^,],%d,%[^,]\n",
+        sscanf(line, "%[^,],%[^,],%[^,],%[^,],%[^,],%[^,],%[^,],%[^,],%[^,],%[^,],%d,%s\n",
                &customers[num_customers].name,
                &customers[num_customers].surname,
                &customers[num_customers].gender,
@@ -105,11 +120,11 @@ int main() {
     fclose(fp); // close the file
 
 
-    fp = fopen("records.dat", "wb"); //open a stream with write mode
+    fp = fopen("./records.dat", "w"); //open a stream with write mode
 
     if(fp == NULL) // if an error occurs opening a file
     {
-        printf("error opening file!\n");
+        printf("Error. Can't open dat file!\n");
         exit (1);
     }
 
@@ -130,11 +145,89 @@ int main() {
         printf("Bank Account Number: %s\n", customers[i].bankAccountNumber);
         printf("IBAN: %s\n", customers[i].IBAN);
         printf("Account Type: %s\n", customers[i].accountType);
-        printf("Currency Unit: %c\n", customers[i].currency_unit);
+        printf("Currency Unit: %s\n", customers[i].currency_unit);
         printf("Total Balance Available: %d\n", customers[i].totalBalanceAvailable);
-        printf("Available for Loan: %c\n", customers[i].availableForLoan);
+        printf("Available for Loan: %s\n", customers[i].availableForLoan);
         printf("\n");
-    };
+
+    }
+
+
+    // CONVERTIRNG BINARY TO XML
+    xmlDocPtr records_document = NULL;       /* document pointer */
+    xmlNodePtr root_node = NULL, row_node = NULL, customer_info_node = NULL, bank_account_info_node = NULL, total_balance_available_node;  /* node pointers */
+    char buff[256];
+    
+    
+    records_document = xmlNewDoc(BAD_CAST "1.0");       // Creating the XML file
+    root_node = xmlNewNode(NULL, BAD_CAST "records");   // Creating the root node of records XML file
+    xmlDocSetRootElement(records_document, root_node);  // Assigning the previous root node as root node of the document
+
+    customer readItem;
+    
+    fp = fopen("./records.dat", "r"); // Creating file pointer to read binary file
+
+    if(fp == NULL)  // Checking if the file created correctly
+    {
+        printf("Error. Can't open binary file.");
+        exit(1);
+    }
+
+    for (size_t i = 1; i < sizeof(customers)/sizeof(customer); i++) // Looping through file
+    {
+        row_node = xmlNewChild(root_node, NULL, BAD_CAST "row", NULL);  // Creating id node and assigning it as child of root node
+        sprintf(buff, "%d", i);
+        xmlNewProp(row_node, BAD_CAST "id", BAD_CAST buff);    // Adding id attribute to row node
+
+        customer_info_node = xmlNewChild(row_node, NULL, BAD_CAST "customer_info", NULL);   // Creating customer info node and assigning it as child of root node
+        bank_account_info_node = xmlNewChild(row_node, NULL, BAD_CAST "bank_account_info", NULL);   // Creating bank account info node and assigning it as child of root node
+
+        fread(&readItem, sizeof(customer), 1, fp); // Reading current customer data
+
+        xmlNewChild(customer_info_node, NULL, BAD_CAST "name", readItem.name); // Adding name node as child of customer_info node
+        xmlNewChild(customer_info_node, NULL, BAD_CAST "surname", readItem.surname); // Adding surname node as child of customer_info node
+        sprintf(buff, "%c", readItem.gender);
+        xmlNewChild(customer_info_node, NULL, BAD_CAST "gender", buff); // Adding gender node as child of customer_info node
+        xmlNewChild(customer_info_node, NULL, BAD_CAST "occupancy", readItem.occupancy); // Adding occupancy node as child of customer_info node
+        xmlNewChild(customer_info_node, NULL, BAD_CAST "level_of_education", readItem.levelOfEducation); // Adding level_of_education node as child of customer_info node
+        
+        xmlNewChild(bank_account_info_node, NULL, BAD_CAST "bank_account_number", readItem.bankAccountNumber); // Adding bank_account_number node as child of bank_account_info node
+        xmlNewChild(bank_account_info_node, NULL, BAD_CAST "IBAN", readItem.IBAN); // Adding IBAN node as child of bank_account_info node
+        xmlNewChild(bank_account_info_node, NULL, BAD_CAST "account_type", readItem.accountType); // Adding account_type node as child of bank_account_info node
+        
+        sprintf(buff, "%d", readItem.totalBalanceAvailable);
+        total_balance_available_node = xmlNewChild(bank_account_info_node, NULL, BAD_CAST "total_balance_available", buff); // Adding total_balance_available node as child of bank_account_info node
+        
+        sprintf(buff, "%s", readItem.currency_unit);
+        xmlNewProp(total_balance_available_node, BAD_CAST "currency_unit", BAD_CAST buff);  // Adding currency_unit attribute to bank_account_info node
+        xmlNewProp(total_balance_available_node, BAD_CAST "bigEnd_Version", BAD_CAST "Will be updated");  // Adding bigEnd_Version attribute to bank_account_info node
+
+        sprintf(buff, "%s", readItem.availableForLoan);
+        xmlNewChild(bank_account_info_node, NULL, BAD_CAST "available_for_loan", buff); // Adding available_for_loan node as child of bank_account_info node
+    }
+
+
+    
+
+    fclose(fp);
+    /*
+     * Dumping document to stdio or file
+     */
+     xmlSaveFormatFileEnc("records.xml", records_document, "UTF-8", 1);
+    xmlSaveFormatFileEnc("-", records_document, "UTF-8", 1);
+	
+	
+    //xmlSaveFormatFile
+    
+    /*free the document */
+    xmlFreeDoc(records_document );
+    /*
+     *Free the global variables that may
+     *have been allocated by the parser.
+     */
+    xmlCleanupParser();
+    //xmlMemoryDump();
+    
 
     return 0;
 }
