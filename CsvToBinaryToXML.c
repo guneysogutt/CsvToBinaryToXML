@@ -38,6 +38,7 @@ typedef struct _customer {
 
 typedef struct _customer customer; // use the _customer as customer
 
+customer customers[51];
 
 // this function adds a space between two consecutive commas
 void addCommaSpace(char *str) { 
@@ -65,19 +66,19 @@ void addCommaSpace(char *str) {
     }
 } // end of addCommaSpace
 
-int main(int argc, char **argv) {
+
+void csv_to_bin (char* input_file, char* output_file){
 
     FILE *fp; // create file pointer
 
-    customer customers[51];
 
     int num_customers = 0; // set the initial customer number before adding to the struct array
 
-    fp = fopen("./records.csv", "r"); //open a stream with read mode
+    fp = fopen(input_file, "r"); //open a stream with read mode
 
 
     if(fp == NULL){ // if an error occurs opening a file
-        printf("Error. Can't open cvs file!\n");
+        printf("Error. Can't open csv file!\n");
         exit (1);
     }
 
@@ -120,7 +121,7 @@ int main(int argc, char **argv) {
     fclose(fp); // close the file
 
 
-    fp = fopen("./records.dat", "w"); //open a stream with write mode
+    fp = fopen(output_file, "w"); //open a stream with write mode
 
     if(fp == NULL) // if an error occurs opening a file
     {
@@ -152,20 +153,25 @@ int main(int argc, char **argv) {
 
     }
 
+} // end csv_to_bin
 
+void binary_to_XML(char* input_file,char* output_file){
     // CONVERTIRNG BINARY TO XML
+
+    FILE* fp;
+
     xmlDocPtr records_document = NULL;       /* document pointer */
     xmlNodePtr root_node = NULL, row_node = NULL, customer_info_node = NULL, bank_account_info_node = NULL, total_balance_available_node;  /* node pointers */
     char buff[256];
     
     
     records_document = xmlNewDoc(BAD_CAST "1.0");       // Creating the XML file
-    root_node = xmlNewNode(NULL, BAD_CAST "records");   // Creating the root node of records XML file
+    root_node = xmlNewNode(NULL, BAD_CAST input_file);   // Creating the root node of records XML file
     xmlDocSetRootElement(records_document, root_node);  // Assigning the previous root node as root node of the document
 
     customer readItem;
     
-    fp = fopen("./records.dat", "r"); // Creating file pointer to read binary file
+    fp = fopen(input_file, "r"); // Creating file pointer to read binary file
 
     if(fp == NULL)  // Checking if the file created correctly
     {
@@ -190,6 +196,7 @@ int main(int argc, char **argv) {
         xmlNewChild(customer_info_node, NULL, BAD_CAST "gender", buff); // Adding gender node as child of customer_info node
         xmlNewChild(customer_info_node, NULL, BAD_CAST "occupancy", readItem.occupancy); // Adding occupancy node as child of customer_info node
         xmlNewChild(customer_info_node, NULL, BAD_CAST "level_of_education", readItem.levelOfEducation); // Adding level_of_education node as child of customer_info node
+        xmlNewChild(customer_info_node, NULL, BAD_CAST "email", readItem.email); // Adding email node as child of customer_info node
         
         xmlNewChild(bank_account_info_node, NULL, BAD_CAST "bank_account_number", readItem.bankAccountNumber); // Adding bank_account_number node as child of bank_account_info node
         xmlNewChild(bank_account_info_node, NULL, BAD_CAST "IBAN", readItem.IBAN); // Adding IBAN node as child of bank_account_info node
@@ -204,7 +211,7 @@ int main(int argc, char **argv) {
 
         sprintf(buff, "%s", readItem.availableForLoan);
         xmlNewChild(bank_account_info_node, NULL, BAD_CAST "available_for_loan", buff); // Adding available_for_loan node as child of bank_account_info node
-    }
+    } 
 
 
     
@@ -213,7 +220,7 @@ int main(int argc, char **argv) {
     /*
      * Dumping document to stdio or file
      */
-     xmlSaveFormatFileEnc("records.xml", records_document, "UTF-8", 1);
+    xmlSaveFormatFileEnc(output_file, records_document, "UTF-8", 1);
     xmlSaveFormatFileEnc("-", records_document, "UTF-8", 1);
 	
 	
@@ -227,6 +234,37 @@ int main(int argc, char **argv) {
      */
     xmlCleanupParser();
     //xmlMemoryDump();
+
+} // end binary_to_XML
+
+void XSD_validation(char* input_file, char* output_file){
+    printf("This function will be updated\n");
+}
+
+int main(int argc, char **argv) {
+
+
+    // set and assign the command query file names and type
+    char* input_file = argv[1];
+    char* output_file = argv[2];
+    int type = atoi(argv[3]);
+
+
+    // Assign command query types
+    switch(type){ 
+        case 1: 
+            csv_to_bin(input_file,output_file);
+            break;
+        case 2: 
+            binary_to_XML(input_file,output_file);
+            break;
+        case 3:
+            XSD_validation(input_file,output_file);
+            break;    
+        default:
+            printf("Invalid query!\n");
+            break;    
+    }
     
 
     return 0;
