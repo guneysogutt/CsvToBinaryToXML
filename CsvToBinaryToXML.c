@@ -26,39 +26,38 @@ typedef struct _customer {
     char surname[MAX_SURNAME_LEN];// surname is assumed at most 30 characters
     char gender;// M(male) or F(female)
     char occupancy[MAX_OCCUPANCY_LEN];// occupancy is assumed at most 30 characters
-    char levelOfEducation[MAX_EDUCATION_LEN];// it can be at most 3 chars eg: "PhD","MSc","PS", etc.
+    char level_of_education[MAX_EDUCATION_LEN];// it can be at most 3 chars eg: "PhD","MSc","PS", etc.
     char email[MAX_EMAIL_LEN];// ends with @google,@yahoo or @hotmail.com
-    char bankAccountNumber[MAX_BANK_ACC_LEN];// the format is 0123-4567890
+    char bank_account_number[MAX_BANK_ACC_LEN];// the format is 0123-4567890
     char IBAN[MAX_IBAN_LEN];// the format is : TR12 3456 7890 1234 5678 90
-    char accountType[MAX_ACC_TYPE_LEN];// it can be "deposit","drawing","daily_deposit"
+    char account_type[MAX_ACC_TYPE_LEN];// it can be "deposit","drawing","daily_deposit"
     char currency_unit[MAX_CURRENCY_UNIT_LEN];// "€","₺","$"
-    int totalBalanceAvailable;// stores the available balance of the customer
-    char availableForLoan[MAX_AVAILABLE_LOAN_LEN]; // it can be ":)" or ":("
+    int total_balance_available;// stores the available balance of the customer
+    char available_for_loan[MAX_AVAILABLE_LOAN_LEN]; // it can be ":)" or ":("
 } ;
 
 typedef struct _customer customer; // use the _customer as customer
 
-customer customers[51]; // create the customers array
 
 // this function adds a space between two consecutive commas
-void addCommaSpace(char *str) { 
+void addCommaSpace(char *str) {
     char *p = str;
-    
+
     int size = strlen(str); // get the size of the line
-    
+
     int index = 0; // current index
-    
+
     while (*p) {
 
         if (*p == ',' && *(p+1) == ',') { // if consecutive commas occurs
-            
+
             *p = ',';
             for(int i = size; i > index + 2; i--){ // move each char one cell right in order to allocate the space without losing data
                 str[i] = str[i-1];
             }
             *(p+1) = ' '; // add a space between them
             *(p+2) = ','; // put the original comma back
-            
+
         } else { // if no consecutive commas
             p++; // just increase the pointer
         }
@@ -67,21 +66,21 @@ void addCommaSpace(char *str) {
 } // end of addCommaSpace
 
 
-// CONVERING CSV FILE TO BINARY FILE
+// CONVERTING CSV FILE TO BINARY FILE
 void csv_to_bin (char* input_file, char* output_file){
 
-    FILE *fp; // create file pointer
-
-    int num_customers = 0; // set the initial customer number before adding to the struct array
+    FILE *fp; // create reading file pointer
+    FILE *fp2; // create writing file pointer
 
     fp = fopen(input_file, "r"); //open a stream with read mode
+    fp2 = fopen(output_file, "w"); //open a stream with write mode
 
+    customer readItem;
 
-    if(fp == NULL){ // if an error occurs opening a file
-        printf("Error. Can't open csv file!\n");
+    if(fp == NULL || fp2 == NULL){ // if an error occurs opening a file
+        printf("Error. Can't open the file!\n");
         exit (1);
     }
-
 
     char line[sizeof (customer)]; // create the line to be read variable
 
@@ -90,6 +89,7 @@ void csv_to_bin (char* input_file, char* output_file){
 
     fgets(line, line_length, fp); // skip the header line
 
+    int num_customers = 0; // counts the number of the customers
 
     // read each subsequent line using sscanf()
     //then assign the data for each attribute of the customer structure seperately
@@ -97,90 +97,81 @@ void csv_to_bin (char* input_file, char* output_file){
 
         addCommaSpace(line); // add space if there are consecutive commas
 
+
         // this implementation found from IBM documentation
         //%[^,] means that read until the comma, but don't include it
         // "%[^,],%[^,],%[^,],%[^,],%[^,],%[^,],%[^,],%[^,],%[^,],%[^,],%d,%s\n"
         sscanf(line, "%[^,],%[^,],%[^,],%[^,],%[^,],%[^,],%[^,],%[^,],%[^,],%[^,],%d,%s\n",
-               &customers[num_customers].name, 
-               &customers[num_customers].surname,
-               &customers[num_customers].gender,
-               &customers[num_customers].occupancy,
-               &customers[num_customers].levelOfEducation,
-               &customers[num_customers].email,
-               &customers[num_customers].bankAccountNumber,
-               &customers[num_customers].IBAN,
-               &customers[num_customers].accountType,
-               &customers[num_customers].currency_unit,
-               &customers[num_customers].totalBalanceAvailable,
-               &customers[num_customers].availableForLoan
+               &readItem.name,
+               &readItem.surname,
+               &readItem.gender,
+               &readItem.occupancy,
+               &readItem.level_of_education,
+               &readItem.email,
+               &readItem.bank_account_number,
+               &readItem.IBAN,
+               &readItem.account_type,
+               &readItem.currency_unit,
+               &readItem.total_balance_available,
+               &readItem.available_for_loan
         );
 
-        num_customers++; // increase the index number
-    }
 
 
-    fclose(fp); // close the file
+        // write the data in the structure array into a .dat file
+        fwrite(&readItem,line_length,1,fp2);
 
-
-    fp = fopen(output_file, "w"); //open a stream with write mode
-
-    if(fp == NULL) // if an error occurs opening a file
-    {
-        printf("Error. Can't open dat file!\n");
-        exit (1);
-    }
-
-    // write the data in the structure array into a .dat file
-    fwrite(customers,sizeof (customer),num_customers,fp);
-
-    fclose(fp); // close the file
-
-    // print the customers
-    for (int i = 0; i < num_customers; i++) {
-
-        printf("Customer %d:\n", i + 1);
-        printf("Name: %s %s\n", customers[i].name, customers[i].surname);
-        printf("Gender: %c\n", customers[i].gender);
-        printf("Occupancy: %s\n", customers[i].occupancy);
-        printf("Level of Education: %s\n", customers[i].levelOfEducation);
-        printf("Email: %s\n", customers[i].email);
-        printf("Bank Account Number: %s\n", customers[i].bankAccountNumber);
-        printf("IBAN: %s\n", customers[i].IBAN);
-        printf("Account Type: %s\n", customers[i].accountType);
-        printf("Currency Unit: %s\n", customers[i].currency_unit);
-        printf("Total Balance Available: %d\n", customers[i].totalBalanceAvailable);
-        printf("Available for Loan: %s\n", customers[i].availableForLoan);
+        // print the customers
+        printf("Customer %d:\n", num_customers + 1);
+        printf("Name: %s %s\n", readItem.name, readItem.surname);
+        printf("Gender: %c\n", readItem.gender);
+        printf("Occupancy: %s\n", readItem.occupancy);
+        printf("Level of Education: %s\n", readItem.level_of_education);
+        printf("Email: %s\n", readItem.email);
+        printf("Bank Account Number: %s\n", readItem.bank_account_number);
+        printf("IBAN: %s\n", readItem.IBAN);
+        printf("Account Type: %s\n", readItem.account_type);
+        printf("Currency Unit: %s\n", readItem.currency_unit);
+        printf("Total Balance Available: %d\n", readItem.total_balance_available);
+        printf("Available for Loan: %s\n", readItem.available_for_loan);
         printf("\n");
+
+
+        num_customers++; // increase the customer number
     }
+
+
+    fclose(fp); // close the file
+    fclose(fp2); // close the file
 
 } // end csv_to_bin
 
 
-// CONVERTIRNG BINARY TO XML
+// CONVERTING BINARY TO XML
 void binary_to_XML(char* input_file,char* output_file){
-    
+
     FILE* fp;
 
     xmlDocPtr records_document = NULL;       /* document pointer */
     xmlNodePtr root_node = NULL, row_node = NULL, customer_info_node = NULL, bank_account_info_node = NULL, total_balance_available_node;  /* node pointers */
     char buff[256];
-    
-    
-    
+
+
+
     records_document = xmlNewDoc(BAD_CAST "1.0");       // Creating the XML file
 
-    //Storing the part of the output file name before the "." 
+    //Storing the part of the output file name before the "."
     for (size_t i = 0; i < sizeof(output_file)-1; i++)  // Looping through the part of the output file name before the "."
     {
         buff[i] = output_file[i];   // Storing encountered characters in variable
     }
-    //Finish storing the part of the output file name before the "." 
+    //Finish storing the part of the output file name before the "."
 
     root_node = xmlNewNode(NULL, BAD_CAST buff);   // Creating the root node of records XML file
     xmlDocSetRootElement(records_document, root_node);  // Assigning the previous root node as root node of the document
 
     customer readItem;
-    
+
     fp = fopen(input_file, "r"); // Creating file pointer to read binary file
 
     if(fp == NULL)  // Checking if the file created correctly
@@ -189,9 +180,14 @@ void binary_to_XML(char* input_file,char* output_file){
         exit(1);
     }
 
-    for (size_t i = 1; i < sizeof(customers)/sizeof(customer); i++) // Looping through file
+    fseek(fp,0,SEEK_END);// seek to end of file
+    int file_size = ftell(fp); // calculating the file size in bytes
+    fseek(fp,0,SEEK_SET); // seek back to beginning of file
+
+
+    for (size_t i = 1; i <= file_size/sizeof(customer); i++) // Looping through file
     {
-        
+
         row_node = xmlNewChild(root_node, NULL, BAD_CAST "row", NULL);  // Creating id node and assigning it as child of root node
         sprintf(buff, "%d", i);
         xmlNewProp(row_node, BAD_CAST "id", BAD_CAST buff);    // Adding id attribute to row node
@@ -206,48 +202,48 @@ void binary_to_XML(char* input_file,char* output_file){
         sprintf(buff, "%c", readItem.gender);
         xmlNewChild(customer_info_node, NULL, BAD_CAST "gender", buff); // Adding gender node as child of customer_info node
         xmlNewChild(customer_info_node, NULL, BAD_CAST "occupancy", readItem.occupancy); // Adding occupancy node as child of customer_info node
-        xmlNewChild(customer_info_node, NULL, BAD_CAST "level_of_education", readItem.levelOfEducation); // Adding level_of_education node as child of customer_info node
+        xmlNewChild(customer_info_node, NULL, BAD_CAST "level_of_education", readItem.level_of_education); // Adding level_of_education node as child of customer_info node
         xmlNewChild(customer_info_node, NULL, BAD_CAST "email", readItem.email); // Adding email node as child of customer_info node
-        
-        xmlNewChild(bank_account_info_node, NULL, BAD_CAST "bank_account_number", readItem.bankAccountNumber); // Adding bank_account_number node as child of bank_account_info node
+
+        xmlNewChild(bank_account_info_node, NULL, BAD_CAST "bank_account_number", readItem.bank_account_number); // Adding bank_account_number node as child of bank_account_info node
         xmlNewChild(bank_account_info_node, NULL, BAD_CAST "IBAN", readItem.IBAN); // Adding IBAN node as child of bank_account_info node
-        xmlNewChild(bank_account_info_node, NULL, BAD_CAST "account_type", readItem.accountType); // Adding account_type node as child of bank_account_info node
-        
-        sprintf(buff, "%d", readItem.totalBalanceAvailable);
+        xmlNewChild(bank_account_info_node, NULL, BAD_CAST "account_type", readItem.account_type); // Adding account_type node as child of bank_account_info node
+
+        sprintf(buff, "%d", readItem.total_balance_available);
         total_balance_available_node = xmlNewChild(bank_account_info_node, NULL, BAD_CAST "total_balance_available", buff); // Adding total_balance_available node as child of bank_account_info node
-        
+
         sprintf(buff, "%s", readItem.currency_unit);
         xmlNewProp(total_balance_available_node, BAD_CAST "currency_unit", BAD_CAST buff);  // Adding currency_unit attribute to bank_account_info node
 
         //Calculating little endian
         int little_endian;  // Creating little endian variable
 
-	    char *big_endian_ptr = &readItem.totalBalanceAvailable; // Creating pointer for big endian(totalBalanceAvailable) value
+	    char *big_endian_ptr = &readItem.total_balance_available; // Creating pointer for big endian(total_balance_available) value
 	    char *little_endian_ptr = &little_endian;   // Creating pointer for little endian
 
         for (size_t j = 0; j < 4; j++)  // Since int is 4 byte, this loop will iterate all of integer's bytes
         {
             little_endian_ptr[j] = big_endian_ptr[3-j]; // Creating little endian value by reverse ordering the big endian bytes
-            
+
         }
         //Finish calculating little endian
-        
+
         sprintf(buff, "%d", little_endian);
         xmlNewProp(total_balance_available_node, BAD_CAST "bigEnd_Version", BAD_CAST buff);  // Adding bigEnd_Version attribute to bank_account_info node
 
-        sprintf(buff, "%s", readItem.availableForLoan);
+        sprintf(buff, "%s", readItem.available_for_loan);
         xmlNewChild(bank_account_info_node, NULL, BAD_CAST "available_for_loan", buff); // Adding available_for_loan node as child of bank_account_info node
-    } 
+    }
 
 
 
     fclose(fp);
-    
+
     //Dumping document to stdio and file
     xmlSaveFormatFileEnc(output_file, records_document, "UTF-8", 1);
     xmlSaveFormatFileEnc("-", records_document, "UTF-8", 1);
-	
-    
+
+
     //Free the document
     xmlFreeDoc(records_document);
 
@@ -256,6 +252,7 @@ void binary_to_XML(char* input_file,char* output_file){
     xmlCleanupParser();
 
 } // end binary_to_XML
+
 
 void XSD_validation(char* input_file, char* output_file){
     printf("This function will be updated\n");
@@ -271,21 +268,21 @@ int main(int argc, char **argv) {
 
 
     // Assign command query types
-    switch(type){ 
-        case 1: 
+    switch(type){
+        case 1:
             csv_to_bin(input_file,output_file);
             break;
-        case 2: 
+        case 2:
             binary_to_XML(input_file,output_file);
             break;
         case 3:
             XSD_validation(input_file,output_file);
-            break;    
+            break;
         default:
             printf("Invalid query!\n");
-            break;    
+            break;
     }
-    
+
 
     return 0;
 }
