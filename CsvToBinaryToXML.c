@@ -167,7 +167,9 @@ void binary_to_XML(char* input_file,char* output_file){
     
     
     records_document = xmlNewDoc(BAD_CAST "1.0");       // Creating the XML file
-    root_node = xmlNewNode(NULL, BAD_CAST input_file);   // Creating the root node of records XML file
+
+    sprintf(buff, "%s", output_file);
+    root_node = xmlNewNode(NULL, BAD_CAST buff);   // Creating the root node of records XML file
     xmlDocSetRootElement(records_document, root_node);  // Assigning the previous root node as root node of the document
 
     customer readItem;
@@ -182,6 +184,7 @@ void binary_to_XML(char* input_file,char* output_file){
 
     for (size_t i = 1; i < sizeof(customers)/sizeof(customer); i++) // Looping through file
     {
+        
         row_node = xmlNewChild(root_node, NULL, BAD_CAST "row", NULL);  // Creating id node and assigning it as child of root node
         sprintf(buff, "%d", i);
         xmlNewProp(row_node, BAD_CAST "id", BAD_CAST buff);    // Adding id attribute to row node
@@ -208,7 +211,22 @@ void binary_to_XML(char* input_file,char* output_file){
         
         sprintf(buff, "%s", readItem.currency_unit);
         xmlNewProp(total_balance_available_node, BAD_CAST "currency_unit", BAD_CAST buff);  // Adding currency_unit attribute to bank_account_info node
-        xmlNewProp(total_balance_available_node, BAD_CAST "bigEnd_Version", BAD_CAST "Will be updated");  // Adding bigEnd_Version attribute to bank_account_info node
+
+        //Calculating little endian
+        int little_endian;  // Creating little endian variable
+
+	    char *big_endian_ptr = &readItem.totalBalanceAvailable; // Creating pointer for big endian(totalBalanceAvailable) value
+	    char *little_endian_ptr = &little_endian;   // Creating pointer for little endian
+
+        for (size_t j = 0; j < 4; j++)  // Since int is 4 byte, this loop will iterate all of integer's bytes
+        {
+            little_endian_ptr[j] = big_endian_ptr[3-j]; // Creating little endian value by reverse ordering the big endian bytes
+            
+        }
+        //Finish calculating little endian
+        
+        sprintf(buff, "%d", little_endian);
+        xmlNewProp(total_balance_available_node, BAD_CAST "bigEnd_Version", BAD_CAST buff);  // Adding bigEnd_Version attribute to bank_account_info node
 
         sprintf(buff, "%s", readItem.availableForLoan);
         xmlNewChild(bank_account_info_node, NULL, BAD_CAST "available_for_loan", buff); // Adding available_for_loan node as child of bank_account_info node

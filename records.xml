@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<records>
+<records.xml>
   <row id="1">
     <customer_info>
       <name>Ahmet</name>
@@ -7,12 +7,13 @@
       <gender>M</gender>
       <occupancy>teacher</occupancy>
       <level_of_education>BSc</level_of_education>
+      <email>ahmet_ozdemir35@gmail.com</email>
     </customer_info>
     <bank_account_info>
       <bank_account_number>0123-4567890</bank_account_number>
       <IBAN>TR12 3456 7890 1234 5678 90</IBAN>
       <account_type>deposit</account_type>
-      <total_balance_available currency_unit="₺" bigEnd_Version="Will be updated">768</total_balance_available>
+      <total_balance_available currency_unit="₺" bigEnd_Version="196608">768</total_balance_available>
       <available_for_loan>😊</available_for_loan>
     </bank_account_info>
   </row>
@@ -23,12 +24,13 @@
       <gender>F</gender>
       <occupancy>accountant</occupancy>
       <level_of_education>HS</level_of_education>
+      <email>ceren_kkilic@hotmail.com</email>
     </customer_info>
     <bank_account_info>
       <bank_account_number>3242-5456343</bank_account_number>
       <IBAN>TR56 2354 5442 5535 3434 43</IBAN>
       <account_type>daily_deposit</account_type>
-      <total_balance_available currency_unit="₺" bigEnd_Version="Will be updated">489</total_balance_available>
+      <total_balance_available currency_unit="₺" bigEnd_Version="-385810432">489</total_balance_available>
       <available_for_loan>☹</available_for_loan>
     </bank_account_info>
   </row>
@@ -39,12 +41,13 @@
       <gender>F</gender>
       <occupancy>doctor</occupancy>
       <level_of_education>PhD</level_of_education>
+      <email>aycanDnz@gmail.com</email>
     </customer_info>
     <bank_account_info>
       <bank_account_number>4422-6749332</bank_account_number>
       <IBAN>TR12 8575 3737 6943 3453 21</IBAN>
       <account_type>deposit</account_type>
-      <total_balance_available currency_unit="$" bigEnd_Version="Will be updated">5120</total_balance_available>
+      <total_balance_available currency_unit="$" bigEnd_Version="1310720">5120</total_balance_available>
       <available_for_loan>😊</available_for_loan>
     </bank_account_info>
   </row>
@@ -55,12 +58,13 @@
       <gender>M</gender>
       <occupancy>butcher</occupancy>
       <level_of_education>PS</level_of_education>
+      <email>hsn_snt@yahoo.com</email>
     </customer_info>
     <bank_account_info>
       <bank_account_number>1928-4329787</bank_account_number>
       <IBAN>TR37 9876 6543 2109 8763 34</IBAN>
       <account_type>drawing</account_type>
-      <total_balance_available currency_unit="₺" bigEnd_Version="Will be updated">650</total_balance_available>
+      <total_balance_available currency_unit="₺" bigEnd_Version="-1979580416">650</total_balance_available>
       <available_for_loan>☹</available_for_loan>
     </bank_account_info>
   </row>
@@ -71,12 +75,13 @@
       <gender>M</gender>
       <occupancy>academician</occupancy>
       <level_of_education>MSc</level_of_education>
+      <email>fern_dawson@gmail.com</email>
     </customer_info>
     <bank_account_info>
       <bank_account_number>2324-3242231</bank_account_number>
       <IBAN>TR57 2425 9598 2324 8492 23</IBAN>
       <account_type>drawing</account_type>
-      <total_balance_available currency_unit="€" bigEnd_Version="Will be updated">953</total_balance_available>
+      <total_balance_available currency_unit="€" bigEnd_Version="-1190985728">953</total_balance_available>
       <available_for_loan>😊</available_for_loan>
     </bank_account_info>
   </row>
@@ -87,12 +92,13 @@
       <gender>M</gender>
       <occupancy>doctor</occupancy>
       <level_of_education>PhD</level_of_education>
+      <email>oskar@hotmail.com</email>
     </customer_info>
     <bank_account_info>
       <bank_account_number>9686-8473734</bank_account_number>
       <IBAN>TR96 8334 3242 2523 5230 02</IBAN>
       <account_type>deposit</account_type>
-      <total_balance_available currency_unit="₺" bigEnd_Version="Will be updated">1204</total_balance_available>
+      <total_balance_available currency_unit="₺" bigEnd_Version="-1274806272">1204</total_balance_available>
       <available_for_loan>😊</available_for_loan>
     </bank_account_info>
   </row>
@@ -103,12 +109,13 @@
       <gender>M</gender>
       <occupancy>lawyer</occupancy>
       <level_of_education>BSc</level_of_education>
+      <email> </email>
     </customer_info>
     <bank_account_info>
       <bank_account_number>5843-9503058</bank_account_number>
       <IBAN>TR67 8430 3853 5320 5275 73</IBAN>
       <account_type>daily_deposit</account_type>
-      <total_balance_available currency_unit="₺" bigEnd_Version="Will be updated">212</total_balance_available>
+      <total_balance_available currency_unit="₺" bigEnd_Version="-738197504">212</total_balance_available>
       <available_for_loan>☹</available_for_loan>
     </bank_account_info>
   </row>
@@ -119,12 +126,13 @@
       <gender>F</gender>
       <occupancy>police</occupancy>
       <level_of_education>HS</level_of_education>
+      <email>aayannn@yahoo.com</email>
     </customer_info>
     <bank_account_info>
       <bank_account_number>6774-0302135</bank_account_number>
       <IBAN>TR12 9438 3004 3544 3266 34</IBAN>
       <account_type>drawing</account_type>
-      <total_balance_available currency_unit="$" bigEnd_Version="Will be updated">450</total_balance_available>
+      <total_balance_available currency_unit="$" bigEnd_Version="-1040121856">450</total_balance_available>
       <available_for_loan>☹</available_for_loan>
     </bank_account_info>
   </row>
@@ -135,12 +143,13 @@
       <gender>M</gender>
       <occupancy>businessman</occupancy>
       <level_of_education>HS</level_of_education>
+      <email>mohammedhampton@yahoo.com</email>
     </customer_info>
     <bank_account_info>
       <bank_account_number>9000-1113813</bank_account_number>
       <IBAN>TR85 9359 1432 9101 4519 00</IBAN>
       <account_type>deposit</account_type>
-      <total_balance_available currency_unit="€" bigEnd_Version="Will be updated">985</total_balance_available>
+      <total_balance_available currency_unit="€" bigEnd_Version="-654114816">985</total_balance_available>
       <available_for_loan>😊</available_for_loan>
     </bank_account_info>
   </row>
@@ -151,12 +160,13 @@
       <gender>M</gender>
       <occupancy>unemployed</occupancy>
       <level_of_education>PS</level_of_education>
+      <email>rafluna@hotmail.com</email>
     </customer_info>
     <bank_account_info>
       <bank_account_number>1928-4727423</bank_account_number>
       <IBAN>TR58 3572 0105 3720 2773 25</IBAN>
       <account_type>drawing</account_type>
-      <total_balance_available currency_unit="₺" bigEnd_Version="Will be updated">150</total_balance_available>
+      <total_balance_available currency_unit="₺" bigEnd_Version="-1778384896">150</total_balance_available>
       <available_for_loan>☹</available_for_loan>
     </bank_account_info>
   </row>
@@ -167,12 +177,13 @@
       <gender>F</gender>
       <occupancy>unemployed</occupancy>
       <level_of_education>BSc</level_of_education>
+      <email>serenamoon@gmail.com</email>
     </customer_info>
     <bank_account_info>
       <bank_account_number>6748-2021741</bank_account_number>
       <IBAN>TR94 9271 3914 7944 5357 29</IBAN>
       <account_type>deposit</account_type>
-      <total_balance_available currency_unit="$" bigEnd_Version="Will be updated">500</total_balance_available>
+      <total_balance_available currency_unit="$" bigEnd_Version="-201261056">500</total_balance_available>
       <available_for_loan>😊</available_for_loan>
     </bank_account_info>
   </row>
@@ -183,12 +194,13 @@
       <gender>F</gender>
       <occupancy> </occupancy>
       <level_of_education>BSc</level_of_education>
+      <email>alasdairp@gmail.com</email>
     </customer_info>
     <bank_account_info>
       <bank_account_number>5738-5921015</bank_account_number>
       <IBAN>TR62 9839 6664 9392 0234 34</IBAN>
       <account_type>daily_deposit</account_type>
-      <total_balance_available currency_unit="₺" bigEnd_Version="Will be updated">910</total_balance_available>
+      <total_balance_available currency_unit="₺" bigEnd_Version="-1912406016">910</total_balance_available>
       <available_for_loan>😊</available_for_loan>
     </bank_account_info>
   </row>
@@ -199,12 +211,13 @@
       <gender>M</gender>
       <occupancy>businessman</occupancy>
       <level_of_education>MSc</level_of_education>
+      <email>balldawson@gmail.com</email>
     </customer_info>
     <bank_account_info>
       <bank_account_number>9349-7177133</bank_account_number>
       <IBAN>TR11 1132 1121 5343 9538 22</IBAN>
       <account_type>deposit</account_type>
-      <total_balance_available currency_unit="₺" bigEnd_Version="Will be updated">1320</total_balance_available>
+      <total_balance_available currency_unit="₺" bigEnd_Version="671416320">1320</total_balance_available>
       <available_for_loan>😊</available_for_loan>
     </bank_account_info>
   </row>
@@ -215,12 +228,13 @@
       <gender>M</gender>
       <occupancy>greengrocer</occupancy>
       <level_of_education>HS</level_of_education>
+      <email>tallulahfig@hotmail.com</email>
     </customer_info>
     <bank_account_info>
       <bank_account_number>2748-2842910</bank_account_number>
       <IBAN>TR19 3194 7196 5033 2774 79</IBAN>
       <account_type>drawing</account_type>
-      <total_balance_available currency_unit="€" bigEnd_Version="Will be updated">250</total_balance_available>
+      <total_balance_available currency_unit="€" bigEnd_Version="-100663296">250</total_balance_available>
       <available_for_loan>☹</available_for_loan>
     </bank_account_info>
   </row>
@@ -231,12 +245,13 @@
       <gender>M</gender>
       <occupancy>engineer</occupancy>
       <level_of_education>MSc</level_of_education>
+      <email>kamilmccul@yahoo.com</email>
     </customer_info>
     <bank_account_info>
       <bank_account_number>9849-2917470</bank_account_number>
       <IBAN>TR75 0202 7188 5626 3761 81</IBAN>
       <account_type>drawing</account_type>
-      <total_balance_available currency_unit="$" bigEnd_Version="Will be updated">1024</total_balance_available>
+      <total_balance_available currency_unit="$" bigEnd_Version="262144">1024</total_balance_available>
       <available_for_loan>😊</available_for_loan>
     </bank_account_info>
   </row>
@@ -247,12 +262,13 @@
       <gender>M</gender>
       <occupancy>academician</occupancy>
       <level_of_education>PhD</level_of_education>
+      <email>teddydavis@hotmail.com</email>
     </customer_info>
     <bank_account_info>
       <bank_account_number>5739-1001757</bank_account_number>
       <IBAN>TR80 4829 1977 7291 9572 91</IBAN>
       <account_type>daily_deposit</account_type>
-      <total_balance_available currency_unit="₺" bigEnd_Version="Will be updated">675</total_balance_available>
+      <total_balance_available currency_unit="₺" bigEnd_Version="-1560150016">675</total_balance_available>
       <available_for_loan>😊</available_for_loan>
     </bank_account_info>
   </row>
@@ -263,12 +279,13 @@
       <gender>F</gender>
       <occupancy>engineer</occupancy>
       <level_of_education>BSc</level_of_education>
+      <email>ottobradford@gmail.com</email>
     </customer_info>
     <bank_account_info>
       <bank_account_number>8201-7570214</bank_account_number>
       <IBAN>TR11 2141 2321 3358 0238 65</IBAN>
       <account_type>deposit</account_type>
-      <total_balance_available currency_unit="₺" bigEnd_Version="Will be updated">1824</total_balance_available>
+      <total_balance_available currency_unit="₺" bigEnd_Version="537329664">1824</total_balance_available>
       <available_for_loan>😊</available_for_loan>
     </bank_account_info>
   </row>
@@ -279,12 +296,13 @@
       <gender>M</gender>
       <occupancy>salesperson</occupancy>
       <level_of_education>HS</level_of_education>
+      <email>wiktorfleming@yahoo.com</email>
     </customer_info>
     <bank_account_info>
       <bank_account_number>7023-2423580</bank_account_number>
       <IBAN>TR05 9288 1047 7400 2018 51</IBAN>
       <account_type>deposit</account_type>
-      <total_balance_available currency_unit="₺" bigEnd_Version="Will be updated">310</total_balance_available>
+      <total_balance_available currency_unit="₺" bigEnd_Version="906035200">310</total_balance_available>
       <available_for_loan>☹</available_for_loan>
     </bank_account_info>
   </row>
@@ -295,12 +313,13 @@
       <gender>M</gender>
       <occupancy>pharmacist</occupancy>
       <level_of_education>BSc</level_of_education>
+      <email>isaac@gmail.com</email>
     </customer_info>
     <bank_account_info>
       <bank_account_number>9572-8910382</bank_account_number>
       <IBAN>TR85 9203 3352 0288 2242 44</IBAN>
       <account_type>deposit</account_type>
-      <total_balance_available currency_unit="$" bigEnd_Version="Will be updated">690</total_balance_available>
+      <total_balance_available currency_unit="$" bigEnd_Version="-1308491776">690</total_balance_available>
       <available_for_loan>😊</available_for_loan>
     </bank_account_info>
   </row>
@@ -311,12 +330,13 @@
       <gender>M</gender>
       <occupancy>dentist</occupancy>
       <level_of_education>MSc</level_of_education>
+      <email>sheapard@gmail.com</email>
     </customer_info>
     <bank_account_info>
       <bank_account_number>7488-3666232</bank_account_number>
       <IBAN>TR11 1323 1188 4779 9338 77</IBAN>
       <account_type>daily_deposit</account_type>
-      <total_balance_available currency_unit="₺" bigEnd_Version="Will be updated">820</total_balance_available>
+      <total_balance_available currency_unit="₺" bigEnd_Version="872611840">820</total_balance_available>
       <available_for_loan>😊</available_for_loan>
     </bank_account_info>
   </row>
@@ -327,12 +347,13 @@
       <gender>F</gender>
       <occupancy>teacher</occupancy>
       <level_of_education>BSc</level_of_education>
+      <email>cormacvilla@hotmail.com</email>
     </customer_info>
     <bank_account_info>
       <bank_account_number>7759-9371661</bank_account_number>
       <IBAN>TR93 8333 1008 8321 3177 01</IBAN>
       <account_type>drawing</account_type>
-      <total_balance_available currency_unit="€" bigEnd_Version="Will be updated">130</total_balance_available>
+      <total_balance_available currency_unit="€" bigEnd_Version="-2113929216">130</total_balance_available>
       <available_for_loan>☹</available_for_loan>
     </bank_account_info>
   </row>
@@ -343,12 +364,13 @@
       <gender>F</gender>
       <occupancy>economist</occupancy>
       <level_of_education>PhD</level_of_education>
+      <email>joycebranch@gmail.com</email>
     </customer_info>
     <bank_account_info>
       <bank_account_number>6638-8377522</bank_account_number>
       <IBAN>TR10 1088 3297 7731 6658 89</IBAN>
       <account_type>deposit</account_type>
-      <total_balance_available currency_unit="₺" bigEnd_Version="Will be updated">927</total_balance_available>
+      <total_balance_available currency_unit="₺" bigEnd_Version="-1627193344">927</total_balance_available>
       <available_for_loan>😊</available_for_loan>
     </bank_account_info>
   </row>
@@ -359,12 +381,13 @@
       <gender>F</gender>
       <occupancy>lawyer</occupancy>
       <level_of_education>BSc</level_of_education>
+      <email>mariyahlawson@hotmail.com</email>
     </customer_info>
     <bank_account_info>
       <bank_account_number>9968-8380057</bank_account_number>
       <IBAN>TR88 8233 6665 9665 9693 91</IBAN>
       <account_type>deposit</account_type>
-      <total_balance_available currency_unit="₺" bigEnd_Version="Will be updated">1384</total_balance_available>
+      <total_balance_available currency_unit="₺" bigEnd_Version="1745158144">1384</total_balance_available>
       <available_for_loan>😊</available_for_loan>
     </bank_account_info>
   </row>
@@ -375,12 +398,13 @@
       <gender>M</gender>
       <occupancy> </occupancy>
       <level_of_education>HS</level_of_education>
+      <email>mikolaj@gmail.com</email>
     </customer_info>
     <bank_account_info>
       <bank_account_number>3322-8855220</bank_account_number>
       <IBAN>TR22 9988 2277 4466 5400 44</IBAN>
       <account_type>drawing</account_type>
-      <total_balance_available currency_unit="$" bigEnd_Version="Will be updated">90</total_balance_available>
+      <total_balance_available currency_unit="$" bigEnd_Version="1509949440">90</total_balance_available>
       <available_for_loan>☹</available_for_loan>
     </bank_account_info>
   </row>
@@ -391,12 +415,13 @@
       <gender>M</gender>
       <occupancy>teacher</occupancy>
       <level_of_education>MSc</level_of_education>
+      <email> </email>
     </customer_info>
     <bank_account_info>
       <bank_account_number>4499-4757929</bank_account_number>
       <IBAN>TR77 8489 9603 3552 2677 49</IBAN>
       <account_type>daily_deposit</account_type>
-      <total_balance_available currency_unit="₺" bigEnd_Version="Will be updated">500</total_balance_available>
+      <total_balance_available currency_unit="₺" bigEnd_Version="-201261056">500</total_balance_available>
       <available_for_loan>😊</available_for_loan>
     </bank_account_info>
   </row>
@@ -407,12 +432,13 @@
       <gender>M</gender>
       <occupancy>dentist</occupancy>
       <level_of_education>PhD</level_of_education>
+      <email>jonaharnold@gmail.com</email>
     </customer_info>
     <bank_account_info>
       <bank_account_number>8333-7599522</bank_account_number>
       <IBAN>TR85 8000 5775 9922 7750 13</IBAN>
       <account_type>deposit</account_type>
-      <total_balance_available currency_unit="₺" bigEnd_Version="Will be updated">800</total_balance_available>
+      <total_balance_available currency_unit="₺" bigEnd_Version="537067520">800</total_balance_available>
       <available_for_loan>😊</available_for_loan>
     </bank_account_info>
   </row>
@@ -423,12 +449,13 @@
       <gender>F</gender>
       <occupancy> </occupancy>
       <level_of_education>PS</level_of_education>
+      <email> </email>
     </customer_info>
     <bank_account_info>
       <bank_account_number>1116-4477889</bank_account_number>
       <IBAN>TR46 6336 6243 4558 8978 79</IBAN>
       <account_type>drawing</account_type>
-      <total_balance_available currency_unit="€" bigEnd_Version="Will be updated">190</total_balance_available>
+      <total_balance_available currency_unit="€" bigEnd_Version="-1107296256">190</total_balance_available>
       <available_for_loan>☹</available_for_loan>
     </bank_account_info>
   </row>
@@ -439,12 +466,13 @@
       <gender>F</gender>
       <occupancy>economist</occupancy>
       <level_of_education>BSc</level_of_education>
+      <email>sorayamiranda@gmail.com</email>
     </customer_info>
     <bank_account_info>
       <bank_account_number>3376-9300275</bank_account_number>
       <IBAN>TR55 7399 2775 0004 3221 41</IBAN>
       <account_type>daily_deposit</account_type>
-      <total_balance_available currency_unit="₺" bigEnd_Version="Will be updated">736</total_balance_available>
+      <total_balance_available currency_unit="₺" bigEnd_Version="-536739840">736</total_balance_available>
       <available_for_loan>😊</available_for_loan>
     </bank_account_info>
   </row>
@@ -455,12 +483,13 @@
       <gender>M</gender>
       <occupancy>doctor</occupancy>
       <level_of_education>BSc</level_of_education>
+      <email> </email>
     </customer_info>
     <bank_account_info>
       <bank_account_number>5522-8400000</bank_account_number>
       <IBAN>TR00 4888 4726 6640 0024 82</IBAN>
       <account_type>deposit</account_type>
-      <total_balance_available currency_unit="₺" bigEnd_Version="Will be updated">2500</total_balance_available>
+      <total_balance_available currency_unit="₺" bigEnd_Version="-1006043136">2500</total_balance_available>
       <available_for_loan>😊</available_for_loan>
     </bank_account_info>
   </row>
@@ -471,12 +500,13 @@
       <gender>M</gender>
       <occupancy>engineer</occupancy>
       <level_of_education>PhD</level_of_education>
+      <email>jakelarsen@yahoo.com</email>
     </customer_info>
     <bank_account_info>
       <bank_account_number>1001-9201884</bank_account_number>
       <IBAN>TR66 7944 5524 4927 5491 95</IBAN>
       <account_type>deposit</account_type>
-      <total_balance_available currency_unit="$" bigEnd_Version="Will be updated">284</total_balance_available>
+      <total_balance_available currency_unit="$" bigEnd_Version="469827584">284</total_balance_available>
       <available_for_loan>☹</available_for_loan>
     </bank_account_info>
   </row>
@@ -487,12 +517,13 @@
       <gender>M</gender>
       <occupancy>economist</occupancy>
       <level_of_education>MSc</level_of_education>
+      <email>alvin@gmail.com</email>
     </customer_info>
     <bank_account_info>
       <bank_account_number>7729-9274011</bank_account_number>
       <IBAN>TR88 4422 0011 7447 5733 55</IBAN>
       <account_type>drawing</account_type>
-      <total_balance_available currency_unit="€" bigEnd_Version="Will be updated">120</total_balance_available>
+      <total_balance_available currency_unit="€" bigEnd_Version="2013265920">120</total_balance_available>
       <available_for_loan>☹</available_for_loan>
     </bank_account_info>
   </row>
@@ -503,12 +534,13 @@
       <gender>M</gender>
       <occupancy> </occupancy>
       <level_of_education>MSc</level_of_education>
+      <email>szymon_owens@gmail.com</email>
     </customer_info>
     <bank_account_info>
       <bank_account_number>5555-6371758</bank_account_number>
       <IBAN>TR24 4537 7311 9663 0024 66</IBAN>
       <account_type>drawing</account_type>
-      <total_balance_available currency_unit="$" bigEnd_Version="Will be updated">1020</total_balance_available>
+      <total_balance_available currency_unit="$" bigEnd_Version="-66912256">1020</total_balance_available>
       <available_for_loan>😊</available_for_loan>
     </bank_account_info>
   </row>
@@ -519,12 +551,13 @@
       <gender>F</gender>
       <occupancy>doctor</occupancy>
       <level_of_education>MSc</level_of_education>
+      <email> </email>
     </customer_info>
     <bank_account_info>
       <bank_account_number>6642-9265463</bank_account_number>
       <IBAN>TR11 1138 8300 7737 3319 62</IBAN>
       <account_type>deposit</account_type>
-      <total_balance_available currency_unit="€" bigEnd_Version="Will be updated">389</total_balance_available>
+      <total_balance_available currency_unit="€" bigEnd_Version="-2063532032">389</total_balance_available>
       <available_for_loan>☹</available_for_loan>
     </bank_account_info>
   </row>
@@ -535,12 +568,13 @@
       <gender>F</gender>
       <occupancy>engineer</occupancy>
       <level_of_education>BSc</level_of_education>
+      <email>azaan@hotmail.com</email>
     </customer_info>
     <bank_account_info>
       <bank_account_number>1100-0022884</bank_account_number>
       <IBAN>TR00 3388 3355 5775 5005 99</IBAN>
       <account_type>daily_deposit</account_type>
-      <total_balance_available currency_unit="₺" bigEnd_Version="Will be updated">508</total_balance_available>
+      <total_balance_available currency_unit="₺" bigEnd_Version="-67043328">508</total_balance_available>
       <available_for_loan>☹</available_for_loan>
     </bank_account_info>
   </row>
@@ -551,12 +585,13 @@
       <gender>M</gender>
       <occupancy>greengrocer</occupancy>
       <level_of_education>HS</level_of_education>
+      <email>jamal_gallagher@gmail.com</email>
     </customer_info>
     <bank_account_info>
       <bank_account_number>6767-3003776</bank_account_number>
       <IBAN>TR33 9948 8500 0047 7529 40</IBAN>
       <account_type>drawing</account_type>
-      <total_balance_available currency_unit="₺" bigEnd_Version="Will be updated">677</total_balance_available>
+      <total_balance_available currency_unit="₺" bigEnd_Version="-1526595584">677</total_balance_available>
       <available_for_loan>☹</available_for_loan>
     </bank_account_info>
   </row>
@@ -567,12 +602,13 @@
       <gender>M</gender>
       <occupancy>unemployed</occupancy>
       <level_of_education>HS</level_of_education>
+      <email>xander_hub@hotmail.com</email>
     </customer_info>
     <bank_account_info>
       <bank_account_number>5553-8850385</bank_account_number>
       <IBAN>TR34 0001 0003 0005 2427 87</IBAN>
       <account_type>drawing</account_type>
-      <total_balance_available currency_unit="₺" bigEnd_Version="Will be updated">85</total_balance_available>
+      <total_balance_available currency_unit="₺" bigEnd_Version="1426063360">85</total_balance_available>
       <available_for_loan>☹</available_for_loan>
     </bank_account_info>
   </row>
@@ -583,12 +619,13 @@
       <gender>F</gender>
       <occupancy>unemployed</occupancy>
       <level_of_education>MSc</level_of_education>
+      <email> </email>
     </customer_info>
     <bank_account_info>
       <bank_account_number>6886-9477694</bank_account_number>
       <IBAN>TR44 4479 5933 0599 5000 05</IBAN>
       <account_type>daily_deposit</account_type>
-      <total_balance_available currency_unit="₺" bigEnd_Version="Will be updated">107</total_balance_available>
+      <total_balance_available currency_unit="₺" bigEnd_Version="1795162112">107</total_balance_available>
       <available_for_loan>☹</available_for_loan>
     </bank_account_info>
   </row>
@@ -599,12 +636,13 @@
       <gender>M</gender>
       <occupancy>businessman</occupancy>
       <level_of_education>BSc</level_of_education>
+      <email>frederic_phelps@gmail.com</email>
     </customer_info>
     <bank_account_info>
       <bank_account_number>4447-4800474</bank_account_number>
       <IBAN>TR96 8850 3770 3775 9211 99</IBAN>
       <account_type>deposit</account_type>
-      <total_balance_available currency_unit="$" bigEnd_Version="Will be updated">690</total_balance_available>
+      <total_balance_available currency_unit="$" bigEnd_Version="-1308491776">690</total_balance_available>
       <available_for_loan>😊</available_for_loan>
     </bank_account_info>
   </row>
@@ -615,12 +653,13 @@
       <gender>F</gender>
       <occupancy> </occupancy>
       <level_of_education>MSc</level_of_education>
+      <email>sahar@hotmail.com</email>
     </customer_info>
     <bank_account_info>
       <bank_account_number>8699-3772776</bank_account_number>
       <IBAN>TR10 4094 9090 0042 4464 77</IBAN>
       <account_type>drawing</account_type>
-      <total_balance_available currency_unit="€" bigEnd_Version="Will be updated">369</total_balance_available>
+      <total_balance_available currency_unit="€" bigEnd_Version="1895890944">369</total_balance_available>
       <available_for_loan>☹</available_for_loan>
     </bank_account_info>
   </row>
@@ -631,12 +670,13 @@
       <gender>M</gender>
       <occupancy>police</occupancy>
       <level_of_education>BSc</level_of_education>
+      <email>leonard_jackson@yahoo.com</email>
     </customer_info>
     <bank_account_info>
       <bank_account_number>1148-9492754</bank_account_number>
       <IBAN>TR88 6906 0038 2791 7878 19</IBAN>
       <account_type>daily_deposit</account_type>
-      <total_balance_available currency_unit="₺" bigEnd_Version="Will be updated">793</total_balance_available>
+      <total_balance_available currency_unit="₺" bigEnd_Version="419627008">793</total_balance_available>
       <available_for_loan>😊</available_for_loan>
     </bank_account_info>
   </row>
@@ -647,12 +687,13 @@
       <gender>F</gender>
       <occupancy>salesperson</occupancy>
       <level_of_education>BSc</level_of_education>
+      <email> </email>
     </customer_info>
     <bank_account_info>
       <bank_account_number>8885-9395739</bank_account_number>
       <IBAN>TR74 3829 9197 7599 8800 04</IBAN>
       <account_type>deposit</account_type>
-      <total_balance_available currency_unit="₺" bigEnd_Version="Will be updated">280</total_balance_available>
+      <total_balance_available currency_unit="₺" bigEnd_Version="402718720">280</total_balance_available>
       <available_for_loan>☹</available_for_loan>
     </bank_account_info>
   </row>
@@ -663,12 +704,13 @@
       <gender>M</gender>
       <occupancy>businessman</occupancy>
       <level_of_education>HS</level_of_education>
+      <email>jordan_paul@hotmail.com</email>
     </customer_info>
     <bank_account_info>
       <bank_account_number>6666-8686888</bank_account_number>
       <IBAN>TR03 2888 4920 0004 7742 44</IBAN>
       <account_type>deposit</account_type>
-      <total_balance_available currency_unit="$" bigEnd_Version="Will be updated">2280</total_balance_available>
+      <total_balance_available currency_unit="$" bigEnd_Version="-402128896">2280</total_balance_available>
       <available_for_loan>😊</available_for_loan>
     </bank_account_info>
   </row>
@@ -679,12 +721,13 @@
       <gender>F</gender>
       <occupancy>engineer</occupancy>
       <level_of_education>PhD</level_of_education>
+      <email>aisha_ryan@gmail.com</email>
     </customer_info>
     <bank_account_info>
       <bank_account_number>6668-9690003</bank_account_number>
       <IBAN>TR90 9399 3925 7101 8381 85</IBAN>
       <account_type>drawing</account_type>
-      <total_balance_available currency_unit="$" bigEnd_Version="Will be updated">956</total_balance_available>
+      <total_balance_available currency_unit="$" bigEnd_Version="-1140654080">956</total_balance_available>
       <available_for_loan>😊</available_for_loan>
     </bank_account_info>
   </row>
@@ -695,12 +738,13 @@
       <gender>M</gender>
       <occupancy>teacher</occupancy>
       <level_of_education>BSc</level_of_education>
+      <email> </email>
     </customer_info>
     <bank_account_info>
       <bank_account_number>4444-9000482</bank_account_number>
       <IBAN>TR11 9918 8272 1212 2123 73</IBAN>
       <account_type>daily_deposit</account_type>
-      <total_balance_available currency_unit="₺" bigEnd_Version="Will be updated">411</total_balance_available>
+      <total_balance_available currency_unit="₺" bigEnd_Version="-1694433280">411</total_balance_available>
       <available_for_loan>☹</available_for_loan>
     </bank_account_info>
   </row>
@@ -711,12 +755,13 @@
       <gender>M</gender>
       <occupancy>police</occupancy>
       <level_of_education>HS</level_of_education>
+      <email>rex_chaney@hotmail.com</email>
     </customer_info>
     <bank_account_info>
       <bank_account_number>2223-2354485</bank_account_number>
       <IBAN>TR77 7499 4920 0114 8842 46</IBAN>
       <account_type>deposit</account_type>
-      <total_balance_available currency_unit="€" bigEnd_Version="Will be updated">825</total_balance_available>
+      <total_balance_available currency_unit="€" bigEnd_Version="956497920">825</total_balance_available>
       <available_for_loan>😊</available_for_loan>
     </bank_account_info>
   </row>
@@ -727,12 +772,13 @@
       <gender>F</gender>
       <occupancy>doctor</occupancy>
       <level_of_education>BSc</level_of_education>
+      <email>anaisruss@hotmail.com</email>
     </customer_info>
     <bank_account_info>
       <bank_account_number>4428-0018733</bank_account_number>
       <IBAN>TR11 0199 0194 7729 2744 27</IBAN>
       <account_type>deposit</account_type>
-      <total_balance_available currency_unit="$" bigEnd_Version="Will be updated">2110</total_balance_available>
+      <total_balance_available currency_unit="$" bigEnd_Version="1040711680">2110</total_balance_available>
       <available_for_loan>😊</available_for_loan>
     </bank_account_info>
   </row>
@@ -743,12 +789,13 @@
       <gender>F</gender>
       <occupancy>lawyer</occupancy>
       <level_of_education>MSc</level_of_education>
+      <email>thea@gmail.com</email>
     </customer_info>
     <bank_account_info>
       <bank_account_number>8589-2900181</bank_account_number>
       <IBAN>TR08 4700 0482 2881 1477 53</IBAN>
       <account_type>drawing</account_type>
-      <total_balance_available currency_unit="€" bigEnd_Version="Will be updated">863</total_balance_available>
+      <total_balance_available currency_unit="€" bigEnd_Version="1594032128">863</total_balance_available>
       <available_for_loan>😊</available_for_loan>
     </bank_account_info>
   </row>
@@ -759,12 +806,13 @@
       <gender>F</gender>
       <occupancy>pharmacist</occupancy>
       <level_of_education>BSc</level_of_education>
+      <email> </email>
     </customer_info>
     <bank_account_info>
       <bank_account_number>1113-3990244</bank_account_number>
       <IBAN>TR66 7488 8371 0077 7742 29</IBAN>
       <account_type>daily_deposit</account_type>
-      <total_balance_available currency_unit="₺" bigEnd_Version="Will be updated">1411</total_balance_available>
+      <total_balance_available currency_unit="₺" bigEnd_Version="-2096824320">1411</total_balance_available>
       <available_for_loan>😊</available_for_loan>
     </bank_account_info>
   </row>
@@ -775,12 +823,13 @@
       <gender>F</gender>
       <occupancy>unemployed</occupancy>
       <level_of_education>PS</level_of_education>
+      <email>henriettamoyer@gmail.com</email>
     </customer_info>
     <bank_account_info>
       <bank_account_number>5529-2991142</bank_account_number>
       <IBAN>TR89 9572 2456 6653 8555 31</IBAN>
       <account_type>drawing</account_type>
-      <total_balance_available currency_unit="₺" bigEnd_Version="Will be updated">75</total_balance_available>
+      <total_balance_available currency_unit="₺" bigEnd_Version="1258291200">75</total_balance_available>
       <available_for_loan>☹</available_for_loan>
     </bank_account_info>
   </row>
@@ -791,13 +840,14 @@
       <gender>F</gender>
       <occupancy>housekeeper</occupancy>
       <level_of_education>PS</level_of_education>
+      <email>katherine_pearce@yahoo.com</email>
     </customer_info>
     <bank_account_info>
       <bank_account_number>5039-3771947</bank_account_number>
       <IBAN>TR18 1847 7927 7017 7400 03</IBAN>
       <account_type>deposit</account_type>
-      <total_balance_available currency_unit="₺" bigEnd_Version="Will be updated">404</total_balance_available>
+      <total_balance_available currency_unit="₺" bigEnd_Version="-1811873792">404</total_balance_available>
       <available_for_loan>☹</available_for_loan>
     </bank_account_info>
   </row>
-</records>
+</records.xml>
