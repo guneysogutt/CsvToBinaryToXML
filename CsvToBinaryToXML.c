@@ -166,9 +166,16 @@ void binary_to_XML(char* input_file,char* output_file){
     char buff[256];
     
     
+    
     records_document = xmlNewDoc(BAD_CAST "1.0");       // Creating the XML file
 
-    sprintf(buff, "%s", output_file);
+    //Storing the part of the output file name before the "." 
+    for (size_t i = 0; i < sizeof(output_file)-1; i++)  // Looping through the part of the output file name before the "."
+    {
+        buff[i] = output_file[i];   // Storing encountered characters in variable
+    }
+    //Finish storing the part of the output file name before the "." 
+
     root_node = xmlNewNode(NULL, BAD_CAST buff);   // Creating the root node of records XML file
     xmlDocSetRootElement(records_document, root_node);  // Assigning the previous root node as root node of the document
 
@@ -235,23 +242,18 @@ void binary_to_XML(char* input_file,char* output_file){
 
 
     fclose(fp);
-    /*
-     * Dumping document to stdio or file
-     */
+    
+    //Dumping document to stdio and file
     xmlSaveFormatFileEnc(output_file, records_document, "UTF-8", 1);
     xmlSaveFormatFileEnc("-", records_document, "UTF-8", 1);
 	
-	
-    //xmlSaveFormatFile
     
-    /*free the document */
-    xmlFreeDoc(records_document );
-    /*
-     *Free the global variables that may
-     *have been allocated by the parser.
-     */
+    //Free the document
+    xmlFreeDoc(records_document);
+
+
+    //Free the global variables that may have been allocated by the parser.
     xmlCleanupParser();
-    //xmlMemoryDump();
 
 } // end binary_to_XML
 

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<records.xml>
+<records>
   <row id="1">
     <customer_info>
       <name>Ahmet</name>
@@ -850,4 +850,4 @@
       <available_for_loan>☹</available_for_loan>
     </bank_account_info>
   </row>
-</records.xml>
+</records>
