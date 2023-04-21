@@ -109,7 +109,7 @@
       <gender>M</gender>
       <occupancy>lawyer</occupancy>
       <level_of_education>BSc</level_of_education>
-      <email> </email>
+      <email/>
     </customer_info>
     <bank_account_info>
       <bank_account_number>5843-9503058</bank_account_number>
@@ -192,7 +192,7 @@
       <name>Alasdair</name>
       <surname>Page</surname>
       <gender>F</gender>
-      <occupancy> </occupancy>
+      <occupancy/>
       <level_of_education>BSc</level_of_education>
       <email>alasdairp@gmail.com</email>
     </customer_info>
@@ -396,7 +396,7 @@
       <name>Mikolaj</name>
       <surname>Le</surname>
       <gender>M</gender>
-      <occupancy> </occupancy>
+      <occupancy/>
       <level_of_education>HS</level_of_education>
       <email>mikolaj@gmail.com</email>
     </customer_info>
@@ -415,7 +415,7 @@
       <gender>M</gender>
       <occupancy>teacher</occupancy>
       <level_of_education>MSc</level_of_education>
-      <email> </email>
+      <email/>
     </customer_info>
     <bank_account_info>
       <bank_account_number>4499-4757929</bank_account_number>
@@ -447,9 +447,9 @@
       <name>Shirley</name>
       <surname>Gay</surname>
       <gender>F</gender>
-      <occupancy> </occupancy>
+      <occupancy/>
       <level_of_education>PS</level_of_education>
-      <email> </email>
+      <email/>
     </customer_info>
     <bank_account_info>
       <bank_account_number>1116-4477889</bank_account_number>
@@ -483,7 +483,7 @@
       <gender>M</gender>
       <occupancy>doctor</occupancy>
       <level_of_education>BSc</level_of_education>
-      <email> </email>
+      <email/>
     </customer_info>
     <bank_account_info>
       <bank_account_number>5522-8400000</bank_account_number>
@@ -532,7 +532,7 @@
       <name>Szymon</name>
       <surname>Owens</surname>
       <gender>M</gender>
-      <occupancy> </occupancy>
+      <occupancy/>
       <level_of_education>MSc</level_of_education>
       <email>szymon_owens@gmail.com</email>
     </customer_info>
@@ -551,7 +551,7 @@
       <gender>F</gender>
       <occupancy>doctor</occupancy>
       <level_of_education>MSc</level_of_education>
-      <email> </email>
+      <email/>
     </customer_info>
     <bank_account_info>
       <bank_account_number>6642-9265463</bank_account_number>
@@ -619,7 +619,7 @@
       <gender>F</gender>
       <occupancy>unemployed</occupancy>
       <level_of_education>MSc</level_of_education>
-      <email> </email>
+      <email/>
     </customer_info>
     <bank_account_info>
       <bank_account_number>6886-9477694</bank_account_number>
@@ -651,7 +651,7 @@
       <name>Sahar</name>
       <surname>Barnes</surname>
       <gender>F</gender>
-      <occupancy> </occupancy>
+      <occupancy/>
       <level_of_education>MSc</level_of_education>
       <email>sahar@hotmail.com</email>
     </customer_info>
@@ -687,7 +687,7 @@
       <gender>F</gender>
       <occupancy>salesperson</occupancy>
       <level_of_education>BSc</level_of_education>
-      <email> </email>
+      <email/>
     </customer_info>
     <bank_account_info>
       <bank_account_number>8885-9395739</bank_account_number>
@@ -738,7 +738,7 @@
       <gender>M</gender>
       <occupancy>teacher</occupancy>
       <level_of_education>BSc</level_of_education>
-      <email> </email>
+      <email/>
     </customer_info>
     <bank_account_info>
       <bank_account_number>4444-9000482</bank_account_number>
@@ -806,7 +806,7 @@
       <gender>F</gender>
       <occupancy>pharmacist</occupancy>
       <level_of_education>BSc</level_of_education>
-      <email> </email>
+      <email/>
     </customer_info>
     <bank_account_info>
       <bank_account_number>1113-3990244</bank_account_number>

@@ -3,6 +3,7 @@
 #include <string.h>
 #include <libxml/parser.h>
 #include <libxml/tree.h>
+#include <libxml/xmlschemastypes.h>
 #pragma pack(1)
 
 
@@ -11,7 +12,7 @@
 #define MAX_SURNAME_LEN 31
 #define MAX_OCCUPANCY_LEN 31
 #define MAX_EDUCATION_LEN 4
-#define MAX_EMAIL_LEN 31
+#define MAX_EMAIL_LEN 256
 #define MAX_BANK_ACC_LEN 13
 #define MAX_IBAN_LEN 28
 #define MAX_ACC_TYPE_LEN 14
@@ -82,9 +83,9 @@ void csv_to_bin (char* input_file, char* output_file){
         exit (1);
     }
 
-    char line[sizeof (customer)]; // create the line to be read variable
-
     int line_length = sizeof (customer); // get the size of the structure in bytes
+
+    char line[line_length]; // create the line to be read variable
 
 
     fgets(line, line_length, fp); // skip the header line
@@ -116,7 +117,20 @@ void csv_to_bin (char* input_file, char* output_file){
                &readItem.available_for_loan
         );
 
-
+                // Since the program adds ' ' to 2 consecutive comma and read item takes ' ' as value to corresponding variable
+                // below lines will converts ' ' to null 
+               if(*readItem.name == ' ') *readItem.name = NULL;
+               if(*readItem.surname == ' ') *readItem.surname = NULL;
+               if(readItem.gender == ' ') readItem.gender = NULL;
+               if(*readItem.occupancy == ' ') *readItem.occupancy = NULL;
+               if(*readItem.level_of_education == ' ') *readItem.email = NULL;
+               if(*readItem.email == ' ') *readItem.email = NULL;
+               if(*readItem.bank_account_number == ' ') *readItem.bank_account_number = NULL;
+               if(*readItem.IBAN == ' ') *readItem.IBAN = NULL;
+               if(*readItem.account_type == ' ') *readItem.account_type = NULL;
+               if(*readItem.currency_unit == ' ') *readItem.currency_unit = NULL;
+               if(readItem.total_balance_available == ' ') readItem.total_balance_available = NULL;
+               if(*readItem.available_for_loan == ' ') *readItem.available_for_loan = NULL;
 
         // write the data in the structure array into a .dat file
         fwrite(&readItem,line_length,1,fp2);
@@ -250,12 +264,62 @@ void binary_to_XML(char* input_file,char* output_file){
 
     //Free the global variables that may have been allocated by the parser.
     xmlCleanupParser();
+    
+    //Memory Dump
+    xmlMemoryDump(); 
 
 } // end binary_to_XML
 
 
 void XSD_validation(char* input_file, char* output_file){
-    printf("This function will be updated\n");
+    xmlDocPtr doc;
+    xmlSchemaPtr schema = NULL;
+    xmlSchemaParserCtxtPtr ctxt;
+	
+    char *XMLFileName = input_file; // write your xml file here
+    char *XSDFileName = output_file; // write your xsd file here
+    
+    
+    xmlLineNumbersDefault(1); //set line numbers, 0> no substitution, 1>substitution
+    ctxt = xmlSchemaNewParserCtxt(XSDFileName); //create an xml schemas parse context
+    schema = xmlSchemaParse(ctxt); //parse a schema definition resource and build an internal XML schema
+    xmlSchemaFreeParserCtxt(ctxt); //free the resources associated to the schema parser context
+    
+    doc = xmlReadFile(XMLFileName, NULL, 0); //parse an XML file
+    if (doc == NULL)
+    {
+        fprintf(stderr, "Could not parse %s\n", XMLFileName);
+    }
+    else
+    {
+        xmlSchemaValidCtxtPtr ctxt;  //structure xmlSchemaValidCtxt, not public by API
+        int ret;
+        
+        ctxt = xmlSchemaNewValidCtxt(schema); //create an xml schemas validation context 
+        ret = xmlSchemaValidateDoc(ctxt, doc); //validate a document tree in memory
+        if (ret == 0) //validated
+        {
+            printf("%s validates\n", XMLFileName);
+        }
+        else if (ret > 0) //positive error code number
+        {
+            printf("%s fails to validate\n", XMLFileName);
+        }
+        else //internal or API error
+        {
+            printf("%s validation generated an internal error\n", XMLFileName);
+        }
+        xmlSchemaFreeValidCtxt(ctxt); //free the resources associated to the schema validation context
+        xmlFreeDoc(doc);
+    }
+    // free the resource
+    if(schema != NULL)
+        xmlSchemaFree(schema); //deallocate a schema structure
+
+    xmlSchemaCleanupTypes(); //cleanup the default xml schemas types library
+    xmlCleanupParser(); //cleans memory allocated by the library itself 
+    xmlMemoryDump(); //memory dump
+
 }
 
 
