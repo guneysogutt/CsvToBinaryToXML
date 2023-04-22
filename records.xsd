@@ -45,24 +45,24 @@
                     </xs:element>
                     <xs:element name="level_of_education">
                       <xs:simpleType>
-                              <xs:restriction base="xs:string">
-                                  <xs:enumeration value="PhD"/>
-                                  <xs:enumeration value="MSc"/>
-                                  <xs:enumeration value="BSc"/>
-                                  <xs:enumeration value="HS"/>
-                                  <xs:enumeration value="PS"/>
-                              </xs:restriction>
-                          </xs:simpleType>
+                          <xs:restriction base="xs:string">
+                              <xs:enumeration value="PhD"/>
+                              <xs:enumeration value="MSc"/>
+                              <xs:enumeration value="BSc"/>
+                              <xs:enumeration value="HS"/>
+                              <xs:enumeration value="PS"/>
+                          </xs:restriction>
+                      </xs:simpleType>
                     </xs:element>      
                     <xs:element name="email">
                     <xs:simpleType>
-                            <xs:restriction base="xs:string">
-                                <xs:minLength value="0"/>   <!-- Change this value to 1 after check all restrictions -->
-                                <!--<xs:pattern value="[\w._%+-ığĞşŞçÇöÖüÜ]*@gmail.com"/> -->
-                                <!--<xs:pattern value="[\w._%+-ığĞşŞçÇöÖüÜ]*@hotmail.com"/> -->
-                                <!--<xs:pattern value="[\w._%+-ığĞşŞçÇöÖüÜ]*@yahoo.com"/> -->
-                            </xs:restriction>
-                        </xs:simpleType>                        
+                      <xs:restriction base="xs:string">
+                        <xs:minLength value="0"/>   <!-- Change this value to 1 after check all restrictions -->
+                          <!--<xs:pattern value="[\w._%+-ığĞşŞçÇöÖüÜ]*@gmail.com"/> -->
+                          <!--<xs:pattern value="[\w._%+-ığĞşŞçÇöÖüÜ]*@hotmail.com"/> -->
+                          <!--<xs:pattern value="[\w._%+-ığĞşŞçÇöÖüÜ]*@yahoo.com"/> -->
+                      </xs:restriction>
+                    </xs:simpleType>                        
                     </xs:element>
                   </xs:sequence>
                 </xs:complexType>
@@ -71,37 +71,45 @@
                 <xs:complexType>
                   <xs:sequence>
                     <xs:element name="bank_account_number">
-                        <xs:simpleType>
-                            <xs:restriction base="xs:string">
-                                <xs:maxLength value="12"/>
-                                <xs:minLength value="0"/>   <!-- Change this value to 1 after check all restrictions -->
-                                <xs:pattern value="[0-9]{4}-[0-9]{7}"/>
-                            </xs:restriction>
-                        </xs:simpleType>                        
+                      <xs:simpleType>
+                        <xs:restriction base="xs:string">
+                          <xs:maxLength value="12"/>
+                          <xs:minLength value="0"/>   <!-- Change this value to 1 after check all restrictions -->
+                          <xs:pattern value="[0-9]{4}-[0-9]{7}"/>
+                         </xs:restriction>
+                      </xs:simpleType>                        
                     </xs:element>
                     <xs:element name="IBAN">
-                        <xs:simpleType>
-                            <xs:restriction base="xs:string">
-                                <xs:maxLength value="27"/>
-                                <xs:minLength value="0"/>   <!-- Change this value to 1 after check all restrictions -->
-                                <xs:pattern value="TR[0-9]{2} [0-9]{4} [0-9]{4} [0-9]{4} [0-9]{4} [0-9]{2}"/>
-                            </xs:restriction>
-                        </xs:simpleType>                        
+                      <xs:simpleType>
+                        <xs:restriction base="xs:string">
+                            <xs:maxLength value="27"/>
+                            <xs:minLength value="0"/>   <!-- Change this value to 1 after check all restrictions -->
+                            <xs:pattern value="TR[0-9]{2} [0-9]{4} [0-9]{4} [0-9]{4} [0-9]{4} [0-9]{2}"/>
+                        </xs:restriction>
+                      </xs:simpleType>                        
                     </xs:element>
                     <xs:element name="account_type">
-                        <xs:simpleType>
-                            <xs:restriction base="xs:string">
-                                <xs:enumeration value="deposit"/>
-                                  <xs:enumeration value="drawing"/>
-                                  <xs:enumeration value="daily_deposit"/>
-                            </xs:restriction>
-                        </xs:simpleType>                        
+                       <xs:simpleType>
+                         <xs:restriction base="xs:string">
+                             <xs:enumeration value="deposit"/>
+                             <xs:enumeration value="drawing"/>
+                             <xs:enumeration value="daily_deposit"/>
+                        </xs:restriction>
+                      </xs:simpleType>                        
                     </xs:element>
                     <xs:element name="total_balance_available">
                       <xs:complexType>
                         <xs:simpleContent>
-                          <xs:extension base="xs:unsignedShort">
-                            <xs:attribute name="currency_unit" type="xs:string" use="required" />
+                          <xs:extension base="xs:string">
+                            <xs:attribute name="currency_unit" use="required">
+                                <xs:simpleType>
+                                    <xs:restriction base="xs:string">
+                                        <xs:enumeration value="€"/>
+                                        <xs:enumeration value="₺"/>
+                                        <xs:enumeration value="$"/>
+                                    </xs:restriction>
+                                </xs:simpleType>
+                              </xs:attribute>  
                             <xs:attribute name="bigEnd_Version" type="xs:int" use="required" />
                           </xs:extension>
                         </xs:simpleContent>
