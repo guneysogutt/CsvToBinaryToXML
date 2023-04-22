@@ -76,7 +76,7 @@ void csv_to_bin (char* input_file, char* output_file){
     fp = fopen(input_file, "r"); //open a stream with read mode
     fp2 = fopen(output_file, "w"); //open a stream with write mode
 
-    customer readItem;
+    customer readItem;  // Variable for storing customers' data while reading file 
 
     if(fp == NULL || fp2 == NULL){ // if an error occurs opening a file
         printf("Error. Can't open the file!\n");
@@ -135,7 +135,9 @@ void csv_to_bin (char* input_file, char* output_file){
         // write the data in the structure array into a .dat file
         fwrite(&readItem,line_length,1,fp2);
 
-        // print the customers
+
+        //Please uncomment below lines to see customer data on the terminal
+        /*
         printf("Customer %d:\n", num_customers + 1);
         printf("Name: %s %s\n", readItem.name, readItem.surname);
         printf("Gender: %c\n", readItem.gender);
@@ -149,7 +151,7 @@ void csv_to_bin (char* input_file, char* output_file){
         printf("Total Balance Available: %d\n", readItem.total_balance_available);
         printf("Available for Loan: %s\n", readItem.available_for_loan);
         printf("\n");
-
+        */
 
         num_customers++; // increase the customer number
     }
@@ -166,9 +168,9 @@ void binary_to_XML(char* input_file,char* output_file){
 
     FILE* fp;
 
-    xmlDocPtr records_document = NULL;       /* document pointer */
-    xmlNodePtr root_node = NULL, row_node = NULL, customer_info_node = NULL, bank_account_info_node = NULL, total_balance_available_node;  /* node pointers */
-    char buff[256];
+    xmlDocPtr records_document;     // Document pointer
+    xmlNodePtr root_node, row_node, customer_info_node, bank_account_info_node, total_balance_available_node;  // Node pointers
+    char buff[256];     // Variable for formatting datas in order to write them on xml
 
 
 
@@ -184,7 +186,7 @@ void binary_to_XML(char* input_file,char* output_file){
     root_node = xmlNewNode(NULL, BAD_CAST buff);   // Creating the root node of records XML file
     xmlDocSetRootElement(records_document, root_node);  // Assigning the previous root node as root node of the document
 
-    customer readItem;
+    customer readItem; // Variable for storing customers' data while reading file 
 
     fp = fopen(input_file, "r"); // Creating file pointer to read binary file
 
@@ -255,7 +257,9 @@ void binary_to_XML(char* input_file,char* output_file){
 
     //Dumping document to stdio and file
     xmlSaveFormatFileEnc(output_file, records_document, "UTF-8", 1);
-    xmlSaveFormatFileEnc("-", records_document, "UTF-8", 1);
+
+    //Please uncomment the below line to see xml file on the terminal
+    //xmlSaveFormatFileEnc("-", records_document, "UTF-8", 1);
 
 
     //Free the document
@@ -335,9 +339,11 @@ int main(int argc, char **argv) {
     switch(type){
         case 1:
             csv_to_bin(input_file,output_file);
+            printf("%s file converted to %s successfully\n", input_file, output_file);
             break;
         case 2:
             binary_to_XML(input_file,output_file);
+            printf("%s file converted to %s successfully\n", input_file, output_file);
             break;
         case 3:
             XSD_validation(input_file,output_file);
