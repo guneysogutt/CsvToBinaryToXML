@@ -19,7 +19,7 @@
                       </xs:simpleType>
                     </xs:element>
                     <xs:element name="surname">
-                      <xs:simpleType>
+                      <xs:simpleType> 
                         <xs:restriction base="xs:string">
                           <xs:maxLength value="30" />
                           <xs:minLength value="1" />
@@ -38,7 +38,7 @@
                       <xs:simpleType>
                         <xs:restriction base="xs:string">
                           <xs:maxLength value="30" />
-                          <xs:minLength value="1" /> <!-- This value may be changed to 0 if occupancy can be empty-->
+                          <xs:minLength value="0" /> <!-- This value may be changed to 1 or greater if occupancy can't be empty-->
                           <xs:pattern value="[a-zA-Z ığĞşŞçÇöÖüÜ]*" />
                         </xs:restriction>
                       </xs:simpleType>
@@ -57,10 +57,9 @@
                     <xs:element name="email">
                       <xs:simpleType>
                         <xs:restriction base="xs:string">
-                          <xs:minLength value="1" />
-                          <xs:pattern value="[\w._%+-]*@gmail.com"/>
-                          <xs:pattern value="[\w._%+-]*@hotmail.com"/>
-                          <xs:pattern value="[\w._%+-]*@yahoo.com"/>
+                          <xs:minLength value="0" /> <!-- This value may be changed to 1 or greater if email can't be empty-->
+                          <xs:pattern value="[\w._%+-]*(@gmail.com|@hotmail.com|@yahoo.com)"/>
+                          <xs:pattern value=""/>                        
                         </xs:restriction>
                       </xs:simpleType>
                     </xs:element>

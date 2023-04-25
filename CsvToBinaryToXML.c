@@ -22,7 +22,7 @@
 
 
 // the structure of customer
-struct _customer {
+typedef struct _customer {
     char name[MAX_NAME_LEN];// name is assumed at most 20 characters
     char surname[MAX_SURNAME_LEN];// surname is assumed at most 30 characters
     char gender;// M(male) or F(female)
@@ -41,19 +41,19 @@ typedef struct _customer customer; // use the _customer as customer
 
 
 // this function adds a space between two consecutive commas
-void addCommaSpace(char *str) {
-    char *p = str; // assign the pointer
+void addSpaceBetweenCommas(char *str) {
+    char *p = str;
 
     int size = strlen(str); // get the size of the line
 
     int index = 0; // current index
 
-    while (*p) { // loop through the string
+    while (*p) {
 
         if (*p == ',' && *(p+1) == ',') { // if consecutive commas occurs
 
             *p = ',';
-            for(int i = size; i > index + 2; i--){ // move each char ,after the second comma, one cell right in order to allocate the space without losing data
+            for(int i = size; i > index + 2; i--){ // move each char one cell right in order to allocate the space without losing data
                 str[i] = str[i-1];
             }
             *(p+1) = ' '; // add a space between them
@@ -92,11 +92,11 @@ void csv_to_bin (char* input_file, char* output_file){
 
     int num_customers = 0; // counts the number of the customers
 
-    // read each subsequent line using sscanf() function
+    // read each subsequent line using sscanf()
     //then assign the data for each attribute of the customer structure seperately
     while (fgets(line, line_length, fp) != NULL) {
 
-        addCommaSpace(line); // add space if there are consecutive commas
+        addSpaceBetweenCommas(line); // add space if there are consecutive commas
 
 
         // this implementation found from IBM documentation
@@ -132,7 +132,7 @@ void csv_to_bin (char* input_file, char* output_file){
                if(readItem.total_balance_available == ' ') readItem.total_balance_available = NULL;
                if(*readItem.available_for_loan == ' ') *readItem.available_for_loan = NULL;
 
-        // write the data in the structure into the binary file
+        // write the data in the structure array into a .dat file
         fwrite(&readItem,line_length,1,fp2);
 
 
@@ -275,7 +275,6 @@ void binary_to_XML(char* input_file,char* output_file){
 } // end binary_to_XML
 
 
-// XSD VALIDATION
 void XSD_validation(char* input_file, char* output_file){
     xmlDocPtr doc;
     xmlSchemaPtr schema = NULL;
@@ -325,7 +324,7 @@ void XSD_validation(char* input_file, char* output_file){
     xmlCleanupParser(); //cleans memory allocated by the library itself 
     xmlMemoryDump(); //memory dump
 
-} // end of XSD_validation
+}
 
 
 int main(int argc, char **argv) {
